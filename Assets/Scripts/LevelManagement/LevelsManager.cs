@@ -18,7 +18,7 @@ namespace LevelManagament
             if (Instance == null) {
                 Instance = this;
             } else if (Instance != this) {
-                Destry(this);
+                Destroy(this);
             }
         }
 
