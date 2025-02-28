@@ -28,7 +28,7 @@ namespace LevelManagament
             }
             currentLevel = Instantiate(Levels[id]);
             currentLevelId = id;
-            player.position = currentLevel.GetComponent<Level>.startPosition;
+            player.position = currentLevel.GetComponent<Level>().startPosition;
         }
 
         public void ResetLevel() {
@@ -36,7 +36,7 @@ namespace LevelManagament
                 Destroy(currentLevel);
             }
             currentLevel = Instantiate(Levels[currentLevelId]);
-            player.position = currentLevel.GetComponent<Level>.startPosition;
+            player.position = currentLevel.GetComponent<Level>().startPosition;
         }
     }
 }
