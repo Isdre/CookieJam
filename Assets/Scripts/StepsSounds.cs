@@ -45,7 +45,8 @@ public class StepsSounds : MonoBehaviour
     private void PlayStepSound(GameObject steppedObject)
     {
         var sound = GetStepSound(steppedObject);
-        audioSource.PlayOneShot(sound);
+        if (sound)  
+            audioSource.PlayOneShot(sound);
     }
 
     private AudioClip GetStepSound(GameObject steppedObject) => steppedObject.TryGetComponent<SoundSurface>(out var surface)

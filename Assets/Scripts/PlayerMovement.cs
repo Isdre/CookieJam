@@ -18,9 +18,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private LayerMask groundLayers;
 
+    private float headPitch;
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+    }
+
+    private void Start()
+    {
+        headPitch = head.localEulerAngles.x;
     }
 
     private void Update()
@@ -34,10 +41,11 @@ public class PlayerMovement : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
-        float headPitch = -mouseY * cameraSensitivity.y;
-        float bodyYaw = mouseX * cameraSensitivity.x;
+        headPitch -= mouseY * cameraSensitivity.y;
+        headPitch = Mathf.Clamp(headPitch, -90, 90);
+        head.localRotation = Quaternion.AngleAxis(headPitch, Vector3.right);
 
-        head.Rotate(Vector3.right, headPitch);
+        float bodyYaw = mouseX * cameraSensitivity.x;
         transform.Rotate(Vector3.up, bodyYaw);
     }
 
