@@ -31,7 +31,9 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         Vector3 direction = transform.forward * vertical + transform.right * horizontal;
         direction.y = 0;
+
         characterController.Move(moveSpeed * Time.deltaTime * direction);
+
     }
 
     private void HandleRotation()
