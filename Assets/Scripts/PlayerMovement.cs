@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -14,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Vector2 cameraSensitivity;
 
+    [SerializeField]
+    private LayerMask groundLayers;
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -21,19 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        MovePlayer();
         HandleRotation();
-    }
-
-    private void MovePlayer()
-    {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        Vector3 direction = transform.forward * vertical + transform.right * horizontal;
-        direction.y = 0;
-
-        characterController.Move(moveSpeed * Time.deltaTime * direction);
-
+        MovePlayer();
     }
 
     private void HandleRotation()
@@ -44,7 +37,17 @@ public class PlayerMovement : MonoBehaviour
         float headPitch = -mouseY * cameraSensitivity.y;
         float bodyYaw = mouseX * cameraSensitivity.x;
 
-        head.Rotate(Vector3.right, headPitch); 
-        transform.Rotate(Vector3.up, bodyYaw); 
+        head.Rotate(Vector3.right, headPitch);
+        transform.Rotate(Vector3.up, bodyYaw);
+    }
+
+    private void MovePlayer()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        Vector3 direction = transform.forward * vertical + transform.right * horizontal;
+        direction.y = 0;
+
+        characterController.SimpleMove(moveSpeed * direction);
     }
 }
