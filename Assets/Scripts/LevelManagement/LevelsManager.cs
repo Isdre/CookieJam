@@ -9,7 +9,8 @@ namespace LevelManagament
         public static LevelsManager Instance;
         [SerializeField] private Transform player;
 
-        public List<GameObject> Levels = new();
+        public List<Level> Levels = new();
+
         private GameObject currentLevel;
         private int currentLevelId = -1;
 
@@ -22,21 +23,35 @@ namespace LevelManagament
             }
         }
 
-        public void ChangeLevel(int id) {
+        public void NextLevel() {
+            ChangeLevel(Levels[currentLevelId].NextLevelId);
+        }
+
+        public void NextLevelVariant() {
+            ChangeLevel(Levels[currentLevelId].NextLevelVariantId);
+        }
+
+        public void ChangeLevel(string id) {
             if (currentLevelId != -1) {
                 Destroy(currentLevel);
             }
-            currentLevel = Instantiate(Levels[id]);
-            currentLevelId = id;
-            player.position = currentLevel.GetComponent<Level>().startPosition;
+            
+            foreach (var level in Levels) {
+                if (level.LevelId == id) {
+                    currentLevel = Instantiate(level.LevelPrefab);
+                    currentLevelId = Levels.IndexOf(level);
+                    player.position = level.StartPosition.position;
+                    break;
+                }
+            }
         }
 
         public void ResetLevel() {
-            if (currentLevel != null) {
+            if (currentLevelId != -1) {
                 Destroy(currentLevel);
             }
-            currentLevel = Instantiate(Levels[currentLevelId]);
-            player.position = currentLevel.GetComponent<Level>().startPosition;
+            currentLevel = Instantiate(Levels[currentLevelId].LevelPrefab);
+            player.position = Levels[currentLevelId].StartPosition.position;
         }
     }
 }
