@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger:
-    serializedObject: {fileID: 11400000, guid: 30fdfbe3da982994cb27535f397638b3, type: 2}
+    serializedObject: {fileID: 0}
   _particle: {fileID: 681492378996403064}
 --- !u!114 &3316181389626553115
 MonoBehaviour:
