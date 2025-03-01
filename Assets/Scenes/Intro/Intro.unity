@@ -216,7 +216,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &1700108287871179342
+--- !u!1001 &2045126119
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -226,15 +226,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 415265133832698796, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 637.7637
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 415265133832698796, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.332941
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 415265133832698796, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 137.0218
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 415265133832698796, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -268,6 +268,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cutscene
       objectReference: {fileID: 0}
+    - target: {fileID: 5860834826442784433, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_fontSize
+      value: 37.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860834826442784433, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -278,4 +286,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 44677072}
-  - {fileID: 1700108287871179342}
+  - {fileID: 2045126119}
