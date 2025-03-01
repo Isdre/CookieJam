@@ -1,6 +1,5 @@
 using LevelManagement;
 using Narrator;
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -24,25 +23,35 @@ public class DontKillStoryDirector : MonoBehaviour
     [SerializeField]
     private NarratorCommentSequence afterWaitNarratorSequence;
 
+    private PlayerMovement player;
+
     private IEnumerator Start()
     {
-        var player = GameObject.FindWithTag("Player");
-        KillInteraction.OnAnimalKilled += KillInteraction_OnAnimalKilled;
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+        KillInteraction.OnAnimalKilling += KillInteraction_OnAnimalKilling;
         yield return new WaitForSeconds(initialNarratorSequenceDelay);
         initialNarratorSequence.Say();
         yield return new WaitForSeconds(enablePlayerMovementDelay);
-        player.GetComponent<PlayerMovement>().enabled = true;
+        player.enabled = true;
         Invoke(nameof(StartSayingWinningCommentSequence), waitingDuration);
+    }
+
+    private void KillInteraction_OnAnimalKilling()
+    {
+        KillInteraction.OnAnimalKilling -= KillInteraction_OnAnimalKilling;
+        player.enabled = false;
+        CancelInvoke();
+        NarratorController.Instance.Stop();
+        KillInteraction.OnAnimalKilled += KillInteraction_OnAnimalKilled;
+        NarratorController.OnSequenceEnded -= WinAfterTalking;
+        NarratorController.OnSequenceEnded += LoseAfterTalking;
+        NarratorController.Instance.Say(killNarratorSequence);
     }
 
     private void KillInteraction_OnAnimalKilled()
     {
         KillInteraction.OnAnimalKilled -= KillInteraction_OnAnimalKilled;
-        CancelInvoke();
-        NarratorController.Instance.Stop();
-        NarratorController.OnSequenceEnded -= WinAfterTalking;
-        NarratorController.OnSequenceEnded += LoseAfterTalking;
-        NarratorController.Instance.Say(killNarratorSequence);
+        player.enabled = true;  
     }
 
     private void LoseAfterTalking(NarratorCommentSequence sequence)
