@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 8.3
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: 8e5ec041a3c555e4c8d3314508e10b13, type: 3}
+    delayAfter: 0.8
+    message: Rejestrowanie pozytywnej decyzji.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 6ed31caf81fcfca43b48b8b37ec19505, type: 3}
+    delayAfter: 0.5
+    message: "Jednostka testowa wykazuje zdolno\u015B\u0107 do samodzielnej oceny
+      i przestrzegania zasad."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 67226ae0582106e4a8264eca39d57830, type: 3}
+    delayAfter: 0.5
+    message: Analiza pozytywna.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: fd1c8001795835848a9e547de367fed6, type: 3}
+    delayAfter: 0.3
+    message: Ocenianie zachowania...
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 31f6b46039a886c4bbc53bd37359fe59, type: 3}
+    delayAfter: 1
+    message: "\u0141adowanie podsumowania."
+    delayPerLetter: 0.05

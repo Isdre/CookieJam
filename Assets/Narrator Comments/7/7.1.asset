@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 7.1
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: f3523fb87311a81459c203a30a815bcd, type: 3}
+    delayAfter: 0.4
+    message: Symulacja uruchomiona.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 591a7cfdc5031e848b649725e5d93405, type: 3}
+    delayAfter: 0.3
+    message: "Obiekt testowy przeniesiony do \u015Brodowiska z wysok\u0105 koncentracj\u0105
+      przedmiot\xF3w, kt\xF3re mog\u0105 zosta\u0107 podj\u0119te przez jednostk\u0119
+      testow\u0105."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 6c529e91f5da7e041a9d8183afce5cb2, type: 3}
+    delayAfter: 0.4
+    message: "Niniejsza analiza oceni twoj\u0105 zdolno\u015B\u0107 do rozr\xF3\u017Cniania
+      tego, co jest dost\u0119pne do u\u017Cycia, a co wymaga przestrzegania zasad
+      wymiany."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: dd4853972abd59645a3e5606c03381d0, type: 3}
+    delayAfter: 1
+    message: Obserwacja aktywna.
+    delayPerLetter: 0.05
