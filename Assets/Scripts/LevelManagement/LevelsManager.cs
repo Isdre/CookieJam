@@ -9,7 +9,8 @@ namespace LevelManagament
         public static LevelsManager Instance;
         [SerializeField] private Transform player;
 
-        public List<Level> Levels = new();
+        public List<GameObject> LevelsGameObjects = new();
+        private List<Level> Levels = new();
 
         private GameObject currentLevel;
         private int currentLevelId = -1;
@@ -18,6 +19,12 @@ namespace LevelManagament
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
+                foreach (GameObject level in LevelsGameObjects) {
+                    Level levelComponent = level.GetComponent<Level>();
+                    if (levelComponent != null) {
+                        Levels.Add(levelComponent);
+                    }
+                }
             } else if (Instance != this) {
                 Destroy(this);
             }
@@ -36,11 +43,12 @@ namespace LevelManagament
                 Destroy(currentLevel);
             }
             
-            foreach (var level in Levels) {
+            foreach (Level level in Levels) {
                 if (level.LevelId == id) {
                     currentLevel = Instantiate(level.LevelPrefab);
                     currentLevelId = Levels.IndexOf(level);
                     player.position = level.StartPosition.position;
+                    player.rotation = level.StartPosition.rotation;
                     break;
                 }
             }
@@ -52,6 +60,7 @@ namespace LevelManagament
             }
             currentLevel = Instantiate(Levels[currentLevelId].LevelPrefab);
             player.position = Levels[currentLevelId].StartPosition.position;
+            player.rotation = Levels[currentLevelId].StartPosition.rotation;
         }
     }
 }
