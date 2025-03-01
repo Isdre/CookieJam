@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 2.2
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: 853e3901bbf87cf4c9e6e0f71f009e4f, type: 3}
+    delayAfter: 1
+    message: Analiza reakcji.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 259ec7d482ebbf94fa5485c5804c4a4b, type: 3}
+    delayAfter: 1
+    message: "Obiekt testowy wykazuje podstawowe cechy organizm\xF3w wy\u017Cszych:
+      ruch, reakcj\u0119 na bod\u017Ace, zale\u017Cno\u015B\u0107 od otoczenia."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: bf69f3d6e4ad2114b975ca9c6456ce74, type: 3}
+    delayAfter: 1
+    message: "Czy w twojej bazie wspomnie\u0144 istnieje odniesienie do podobnej
+      jednostki?"
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 9887e8023429bee41a1372f13c0b5a96, type: 3}
+    delayAfter: 1
+    message: "Czy identyfikujesz warto\u015B\u0107 \u017Cycia w kategoriach poza
+      biologiczn\u0105 funkcjonalno\u015Bci\u0105?"
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 3ad86a9acc42cc84bb2dc44786b2af45, type: 3}
+    delayAfter: 1
+    message: "Podj\u0119cie destrukcyjnej decyzji jest niezalecane."
+    delayPerLetter: 0.05

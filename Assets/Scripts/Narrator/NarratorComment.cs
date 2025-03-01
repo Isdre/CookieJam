@@ -1,27 +1,29 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
-namespace Narrator
+[System.Serializable]
+public class NarratorComment
 {
-    [CreateAssetMenu]
-    public class NarratorComment : ScriptableObject
+    [SerializeField]
+    private AudioClip audio;
+    public AudioClip Audio => audio;
+
+    [SerializeField]
+    private float delayAfter = 1;
+    public float DelayAfter => delayAfter;  
+
+    [Header("Subtitles")]
+    [SerializeField]
+    private string message;
+    public string Message => message;
+
+    [SerializeField]
+    private float delayPerLetter = 0.05f;
+    public float LetterDelay => delayPerLetter;
+
+    public NarratorComment(AudioClip audio, string message)
     {
-        [SerializeField]
-        private AudioClip audio;
-        public AudioClip Audio => audio;
-
-        [Header("Subtitles")]
-        [SerializeField]
-        private string message;
-        public string Message => message;
-
-        [SerializeField]
-        private float delayPerLetter;
-        public float LetterDelay => delayPerLetter;
-
-        [ContextMenu("Say")]
-        public void Say()
-        {
-            NarratorController.Instance.Say(this);
-        }
+        this.audio = audio;
+        this.message = message;
     }
 }

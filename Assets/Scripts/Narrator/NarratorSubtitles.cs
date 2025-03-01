@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 namespace Narrator
@@ -19,18 +20,19 @@ namespace Narrator
         private void NarratorController_OnCommentSay(NarratorComment comment)
         {
             currentComment = comment;
-            subtitlesDisplay.SetText(comment.Message);
             subtitlesDisplay.enabled = true;
             subtitlesDisplay.maxVisibleCharacters = 0;
+            string message = comment.Message;
+            subtitlesDisplay.SetText(message);
             StartCoroutine(ShowingSubtitlesCo());
         }
 
         private IEnumerator ShowingSubtitlesCo()
         {
             var wait = new WaitForSeconds(currentComment.LetterDelay);
-            for (int i = 0; i < subtitlesDisplay.text.Length; i++)
+            for (int i = 0; i < currentComment.Message.Length; i++)
             {
-                yield return wait; 
+                yield return wait;
                 subtitlesDisplay.maxVisibleCharacters++;
             }
         }
@@ -45,7 +47,7 @@ namespace Narrator
 
         private void OnDisable()
         {
-            NarratorController.OnCommentSay -= NarratorController_OnCommentSay;    
+            NarratorController.OnCommentSay -= NarratorController_OnCommentSay;
             NarratorController.OnCommentStop -= NarratorController_OnCommentStop;
         }
     }
