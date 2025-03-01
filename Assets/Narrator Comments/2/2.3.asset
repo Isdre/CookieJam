@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comments:
   - audio: {fileID: 8300000, guid: 1ca23da900f33234eb2488f8aa3710f2, type: 3}
-    delayAfter: 1
+    delayAfter: 0.4
     message: "Rejestrowanie dzia\u0142ania\u2026"
     delayPerLetter: 0.05
   - audio: {fileID: 8300000, guid: a3b3854abf86e7a47af1f31d32325fa3, type: 3}
-    delayAfter: 1
+    delayAfter: 0.5
     message: "Ocena: decyzja niezgodna z protoko\u0142em nowego systemu."
-    delayPerLetter: 0.05
+    delayPerLetter: 0.055
   - audio: {fileID: 8300000, guid: f9124366b07917945b0dd6b61e592799, type: 3}
-    delayAfter: 1
+    delayAfter: 0.2
     message: "Obiekt testowy utraci\u0142 funkcje \u017Cyciowe."
     delayPerLetter: 0.05
   - audio: {fileID: 8300000, guid: d587670e4030568408d388d8e5cbcb52, type: 3}
-    delayAfter: 1
+    delayAfter: 0.4
     message: Proces nieodwracalny.
     delayPerLetter: 0.05
   - audio: {fileID: 8300000, guid: 117ff77eb1074fb4da369473d705ac4d, type: 3}
-    delayAfter: 1
+    delayAfter: 0.5
     message: "Analiza twojego post\u0119powania wskazuje na niski poziom adaptacji
       do zasad nowego \u015Bwiata."
     delayPerLetter: 0.05
