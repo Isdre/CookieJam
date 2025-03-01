@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LevelManagament{
+namespace LevelManagement{
     public class ValidateLevel : MonoBehaviour
     {
         private void Awake() {

@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LevelManagament
+namespace LevelManagement
 {
     public class LevelsManager : MonoBehaviour
     {
         public static LevelsManager Instance;
         [SerializeField] private Transform player;
 
-        public List<GameObject> LevelsGameObjects = new();
-        private List<Level> Levels = new();
+        public List<LevelSO> Levels = new();
 
+        [SerializeField]
         private GameObject currentLevel;
         private int currentLevelId = -1;
 
@@ -19,22 +19,22 @@ namespace LevelManagament
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
-                foreach (GameObject level in LevelsGameObjects) {
-                    Level levelComponent = level.GetComponent<Level>();
-                    if (levelComponent != null) {
-                        Levels.Add(levelComponent);
-                    }
-                }
             } else if (Instance != this) {
                 Destroy(this);
             }
         }
 
         public void NextLevel() {
+            if (currentLevelId == -1) {
+                return;
+            }
             ChangeLevel(Levels[currentLevelId].NextLevelId);
         }
 
         public void NextLevelVariant() {
+            if (currentLevelId == -1) {
+                return;
+            }
             ChangeLevel(Levels[currentLevelId].NextLevelVariantId);
         }
 
@@ -43,12 +43,13 @@ namespace LevelManagament
                 Destroy(currentLevel);
             }
             
-            foreach (Level level in Levels) {
+            foreach (LevelSO level in Levels) {
                 if (level.LevelId == id) {
-                    currentLevel = Instantiate(level.LevelPrefab);
+                    currentLevel = Instantiate(level.LevelPrefab) as GameObject;
                     currentLevelId = Levels.IndexOf(level);
-                    player.position = level.StartPosition.position;
-                    player.rotation = level.StartPosition.rotation;
+                    player.position = currentLevel.GetComponent<Level>().StartPosition.position;
+                    Debug.Log(currentLevel.GetComponent<Level>().StartPosition.position);
+                    player.rotation = currentLevel.GetComponent<Level>().StartPosition.rotation;
                     break;
                 }
             }
@@ -58,9 +59,9 @@ namespace LevelManagament
             if (currentLevelId != -1) {
                 Destroy(currentLevel);
             }
-            currentLevel = Instantiate(Levels[currentLevelId].LevelPrefab);
-            player.position = Levels[currentLevelId].StartPosition.position;
-            player.rotation = Levels[currentLevelId].StartPosition.rotation;
+            currentLevel = Instantiate(Levels[currentLevelId].LevelPrefab) as GameObject;
+            player.position = currentLevel.GetComponent<Level>().StartPosition.position;
+            player.rotation = currentLevel.GetComponent<Level>().StartPosition.rotation;
         }
     }
 }
