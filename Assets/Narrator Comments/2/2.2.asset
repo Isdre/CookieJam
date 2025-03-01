@@ -14,24 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comments:
   - audio: {fileID: 8300000, guid: 853e3901bbf87cf4c9e6e0f71f009e4f, type: 3}
-    delayAfter: 1
+    delayAfter: 0.2
     message: Analiza reakcji.
     delayPerLetter: 0.05
   - audio: {fileID: 8300000, guid: 259ec7d482ebbf94fa5485c5804c4a4b, type: 3}
-    delayAfter: 1
+    delayAfter: 0.5
     message: "Obiekt testowy wykazuje podstawowe cechy organizm\xF3w wy\u017Cszych:
       ruch, reakcj\u0119 na bod\u017Ace, zale\u017Cno\u015B\u0107 od otoczenia."
-    delayPerLetter: 0.06
+    delayPerLetter: 0.061
   - audio: {fileID: 8300000, guid: bf69f3d6e4ad2114b975ca9c6456ce74, type: 3}
-    delayAfter: 1
+    delayAfter: 0.5
     message: "Czy w twojej bazie wspomnie\u0144 istnieje odniesienie do podobnej
       jednostki?"
-    delayPerLetter: 0.05
+    delayPerLetter: 0.055
   - audio: {fileID: 8300000, guid: 9887e8023429bee41a1372f13c0b5a96, type: 3}
-    delayAfter: 1
+    delayAfter: 0.5
     message: "Czy identyfikujesz warto\u015B\u0107 \u017Cycia w kategoriach poza
       biologiczn\u0105 funkcjonalno\u015Bci\u0105?"
-    delayPerLetter: 0.05
+    delayPerLetter: 0.055
   - audio: {fileID: 8300000, guid: 3ad86a9acc42cc84bb2dc44786b2af45, type: 3}
     delayAfter: 1
     message: "Podj\u0119cie destrukcyjnej decyzji jest niezalecane."
