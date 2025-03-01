@@ -1,4 +1,5 @@
 using Bipolar.InteractionSystem;
+using Bipolar.RaycastSystem;
 using DG.Tweening;
 using UnityEngine;
 
@@ -11,10 +12,13 @@ public class KillInteraction : Interaction
     private Transform body;
     [SerializeField]
     private MeshRenderer blood;
+    [SerializeField]
+    private RaycastTarget raycastTargetToDisable;
 
     public override void Interact(Interactor interactor)
     {
         OnAnimalKilling?.Invoke();
+        raycastTargetToDisable.enabled = false;
         blood.gameObject.SetActive(true);
         blood.enabled = true;
 
@@ -22,5 +26,6 @@ public class KillInteraction : Interaction
             .Join(body.DOScaleY(0.01f, 1))
             .Join(blood.transform.DOScale(Vector3.one, 1))          
             .OnComplete(() => OnAnimalKilled?.Invoke());
+
     }
 }
