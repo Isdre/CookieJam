@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7274115367845429142, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: m_Name
-      value: Kilable Girl Variant
+      value: Kilable Girl
       objectReference: {fileID: 0}
     - target: {fileID: 7740582397357892974, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: interactions.Array.data[0]
@@ -83,6 +83,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1320727887409985687, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7122275566297434128}
+    - targetCorrespondingSourceObject: {fileID: 1320727887409985687, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2861756179865542597}
   m_SourcePrefab: {fileID: 100100000, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
 --- !u!1 &1254000819165263147 stripped
 GameObject:
@@ -137,11 +140,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   squeezeDelay: 1
-  squeezeDuration: 0.5
-  body: {fileID: 1730349890588773147}
   groundLayers:
     serializedVersion: 2
     m_Bits: 256
+  squeezeDeathSequence: {fileID: 2861756179865542597}
+  body: {fileID: 1730349890588773147}
+  bloodObjects:
+  - {fileID: 8608734185615258922}
+  - {fileID: 2303479626867497615}
 --- !u!54 &7122275566297434128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -169,9 +175,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &2861756179865542597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254000819165263147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fb87e6ba2c25745bda8ea44aca365b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.5
+  squeezedBody: {fileID: 0}
+  blood: {fileID: 6417470452662220212}
+  bloodScale: {x: 2, y: 2, z: 1}
+  bloodParticles: {fileID: 3982598767390105308}
 --- !u!4 &1730349890588773147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1959136288352028327, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+  m_PrefabInstance: {fileID: 230580910265912764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2303479626867497615 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2072969306541102899, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
   m_PrefabInstance: {fileID: 230580910265912764}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &3386824459980066631 stripped
@@ -185,6 +213,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382fe2ad91461ee4c8caf27eed0a2538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &3982598767390105308 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3780270955164652384, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+  m_PrefabInstance: {fileID: 230580910265912764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6417470452662220212 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6502176956234987528, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+  m_PrefabInstance: {fileID: 230580910265912764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7985342081442322114 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7918051955861871486, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
@@ -203,9 +241,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger:
-    serializedObject: {fileID: 11400000, guid: 30fdfbe3da982994cb27535f397638b3, type: 2}
+    serializedObject: {fileID: 0}
   fallingBody: {fileID: 7122275566297434128}
-  pushForce: 2
+  pushForce: {x: 0, y: 0, z: 0}
+  pushTorque: {x: 10, y: 0, z: 0}
+--- !u!4 &8608734185615258922 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8379912738771122326, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+  m_PrefabInstance: {fileID: 230580910265912764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6423327554477588816
 PrefabInstance:
   m_ObjectHideFlags: 0
