@@ -1577,6 +1577,7 @@ GameObject:
   - component: {fileID: 8882523606040638387}
   - component: {fileID: 7267371720129769254}
   - component: {fileID: 5529521605596252578}
+  - component: {fileID: 8065996230502386357}
   m_Layer: 0
   m_Name: Plac Baza
   m_TagString: Untagged
@@ -1622,11 +1623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696bf80e0fef02ff28955cbfd5c8f73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelId: Plac1
   StartPosition: {fileID: 1090887264448032334}
-  NextLevelVariantId: 
-  NextLevelId: 
-  LevelPrefab: {fileID: 2745431300356933250}
 --- !u!114 &5529521605596252578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1639,6 +1636,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c123008e88a0be9a85a46329d38445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8065996230502386357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745431300356933250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c13fecd4a6a1d4e9beb4fe03a2d855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialNarratorSequenceDelay: 0.5
+  initialNarratorSequence: {fileID: 0}
+  enablePlayerMovementDelay: 1
+  killNarratorSequence: {fileID: 0}
+  waitingDuration: 10
+  afterWaitNarratorSequence: {fileID: 0}
 --- !u!1 &2757456051369127975
 GameObject:
   m_ObjectHideFlags: 0
