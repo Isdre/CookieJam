@@ -18,6 +18,7 @@ namespace Forest {
             Debug.Log("Scream");
             _audio.volume = PlayerPrefs.GetFloat("Volume", 1);
             _audio.Play();
+            body.DOMoveY(0.3f,fallingTime);
             body.DORotate(new Vector3(0,0,90f),fallingTime);
         }
     }

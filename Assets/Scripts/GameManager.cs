@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using LevelManagament;
+using LevelManagement;
 
 public class GameManager : MonoBehaviour
     {
@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
         public void Start() {
             LevelsManager.Instance.ChangeLevel(StartLevelId);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         public void Pause() {
