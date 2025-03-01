@@ -216,7 +216,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &1700108287871179342
+--- !u!1001 &2045126119
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -226,15 +226,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 415265133832698796, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 637.7637
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 415265133832698796, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.332941
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 415265133832698796, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 137.0218
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 415265133832698796, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -264,14 +264,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 733148277005086644, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 733148277005086644, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733148277005086644, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733148277005086644, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2683424043205859205, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_Name
       value: Cutscene
       objectReference: {fileID: 0}
-    - target: {fileID: 3735557082103113987, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
-      propertyPath: m_VideoClip
-      value: 
-      objectReference: {fileID: 32900000, guid: b6767594351ba4b48bdd25d4cafc0285, type: 3}
+    - target: {fileID: 5860834826442784433, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860834826442784433, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860834826442784433, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -282,4 +306,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 44677072}
-  - {fileID: 1700108287871179342}
+  - {fileID: 2045126119}
