@@ -5,6 +5,12 @@ namespace Narrator
     [CreateAssetMenu]
     public class NarratorComment : ScriptableObject
     {
+
+        [SerializeField]
+        private AudioClip audio;
+        public AudioClip Audio => audio;
+
+        [Header("Subtitles")]
         [SerializeField]
         private string message;
         public string Message => message;
@@ -13,9 +19,6 @@ namespace Narrator
         private float delayPerLetter;
         public float LetterDelay => delayPerLetter;
 
-        [SerializeField]
-        private AudioClip audio;
-        public AudioClip Audio => audio;
 
         [ContextMenu("Say")]
         public void Say()
