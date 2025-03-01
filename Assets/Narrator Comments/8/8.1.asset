@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 8.1
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: f5aed6e0148edb44fbc64792deb8804e, type: 3}
+    delayAfter: 0.5
+    message: "Zmniejszam liczb\u0119 obiekt\xF3w."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 97eb51ddac57b874da766014d4bffa46, type: 3}
+    delayAfter: 0.5
+    message: "Brak wska\u017Anik\xF3w interakcji."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: b6451b300683ba04bbcdc0a16306a1e2, type: 3}
+    delayAfter: 0.4
+    message: "Ocena samodzielnego rozpoznania granic w\u0142asno\u015Bci."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 6cecb318e2cb30b4db7bd422430e9760, type: 3}
+    delayAfter: 1
+    message: "Post\u0119puj zgodnie z norm\u0105."
+    delayPerLetter: 0.05

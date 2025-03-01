@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 4.2
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: 34c9eb9241b4c4943a8cb088505930c3, type: 3}
+    delayAfter: 0.5
+    message: "Analiza zako\u0144czona."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 54fd9ec940155a345b9e623d23dbc17b, type: 3}
+    delayAfter: 0.6
+    message: 'Decyzja jednostki testowej: ingerencja destrukcyjna.'
+    delayPerLetter: 0.065
+  - audio: {fileID: 8300000, guid: 93513cfe000bfdb45bf3bdef09e2877b, type: 3}
+    delayAfter: 0.5
+    message: "Interpretacja: brak umiej\u0119tno\u015Bci powstrzymania si\u0119 od
+      zaburzenia ekosystemu."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 8f9b9adee958ad249bd5c5d0c5c8dda6, type: 3}
+    delayAfter: 0.5
+    message: "Poziom zako\u0144czony."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 5aa7ea8fba5aaad49822cf684326f1c3, type: 3}
+    delayAfter: 0.6
+    message: Resetowanie symulacji...
+    delayPerLetter: 0.05

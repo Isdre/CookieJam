@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 6.3
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: 862eb16ce52e2494996b805ab20c9532, type: 3}
+    delayAfter: 0.2
+    message: "Analiza zako\u0144czona."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: db83921c230fe934cab0ca479164994e, type: 3}
+    delayAfter: 0.4
+    message: "Ocena: Pozytywna pr\xF3ba eliminacji zachowa\u0144 destrukcyjnych."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 8ba2f4fab5332744c89497d5b3234be9, type: 3}
+    delayAfter: 0.4
+    message: "Brak dzia\u0142a\u0144 zak\u0142\xF3caj\u0105cych."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 20f788421b344e34cb45f0fba3d24ed7, type: 3}
+    delayAfter: 0.5
+    message: "Rejestrowanie zgodno\u015Bci z zasadami nowego systemu."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: da3a46e568a26d34185b41974421a1c8, type: 3}
+    delayAfter: 0.7
+    message: Test pozytywny.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: cd7d68975ab1aaa4d9f0bcbd0a8b47cc, type: 3}
+    delayAfter: 1
+    message: "Przej\u015Bcie do kolejnego etapu."
+    delayPerLetter: 0.05

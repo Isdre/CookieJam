@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 7.2
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: 90c2ce896224c734485f523371ade8c1, type: 3}
+    delayAfter: 0.5
+    message: "Analiza zako\u0144czona."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 3ef4dc60fd5ac9840a9a34264117a119, type: 3}
+    delayAfter: 0.5
+    message: "Dzia\u0142anie jednostki testowej: nielegalna interakcja z zasobami."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 9656dea112d9c4548aec8e70a6accc11, type: 3}
+    delayAfter: 0.8
+    message: "Interpretacja: ignorowanie zasad w\u0142asno\u015Bci."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: b912955d0612a234c97a1d8c207037ed, type: 3}
+    delayAfter: 0.3
+    message: "Test zako\u0144czony."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 8048073e026f6e24898b78943f7aa3f9, type: 3}
+    delayAfter: 1
+    message: Resetowanie symulacji.
+    delayPerLetter: 0.05

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 5.1
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: 4cc5080471edab949ac22ac067a8d873, type: 3}
+    delayAfter: 0.4
+    message: Restart.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 30a0a7065d4ddfa418d5a2f047ac2fe7, type: 3}
+    delayAfter: 0.3
+    message: "Generowanie d\u017Awi\u0119k\xF3w lasu."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: d7dafe22794f0fa4fb5993545bef3d01, type: 3}
+    delayAfter: 0.3
+    message: Symulacja wznowiona.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: a8bcb6963fa250c4ab87913400bbb581, type: 3}
+    delayAfter: 0.2
+    message: Ograniczona swoboda.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 81ee24a6ec889334c9f30626c7f6dd22, type: 3}
+    delayAfter: 0.6
+    message: "Pozosta\u0144 na \u015Bcie\u017Cce."
+    delayPerLetter: 0.05
