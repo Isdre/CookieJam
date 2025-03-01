@@ -185,6 +185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelId: Level0
   StartPosition: {fileID: 7165862214702055601}
-  NextLevelVariantId: Level01
-  NextLevelId: Level1
+  NextLevelVariantId: Plac
+  NextLevelId: Plac
   LevelPrefab: {fileID: 7458417893478711997}

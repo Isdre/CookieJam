@@ -554,7 +554,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.28, y: 0.211, z: -2.1200001}
-  m_LocalScale: {x: 4, y: 0.31236, z: -0.067953}
+  m_LocalScale: {x: 4, y: 0.31236, z: 0.06}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8882523606040638387}
@@ -972,7 +972,7 @@ Transform:
   m_GameObject: {fileID: 2270139920055627896}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.84, y: 0.54, z: 4.21}
+  m_LocalPosition: {x: -0.84, y: 1.87, z: 4.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1305,6 +1305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8882523606040638387}
   - component: {fileID: 7267371720129769254}
+  - component: {fileID: 5529521605596252578}
   m_Layer: 0
   m_Name: Plac
   m_TagString: Untagged
@@ -1384,6 +1385,18 @@ MonoBehaviour:
   NextLevelVariantId: 
   NextLevelId: 
   LevelPrefab: {fileID: 2745431300356933250}
+--- !u!114 &5529521605596252578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745431300356933250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c123008e88a0be9a85a46329d38445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2757456051369127975
 GameObject:
   m_ObjectHideFlags: 0
