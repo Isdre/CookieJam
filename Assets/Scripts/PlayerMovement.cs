@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -8,13 +7,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private Transform head;
-
     [SerializeField]
     private float moveSpeed = 4;
-
     [SerializeField]
     private Vector2 cameraSensitivity;
-
     [SerializeField]
     private LayerMask groundLayers;
 
