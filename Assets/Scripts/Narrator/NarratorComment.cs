@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Narrator
@@ -19,20 +18,9 @@ namespace Narrator
         public AudioClip Audio => audio;
 
         [ContextMenu("Say")]
-        private void SayInEditor()
+        public void Say()
         {
-            this.Say();
-        }
-    }
-
-    public static class NarratorCommentExtensions
-    {
-        public static void Say(this NarratorComment comment)
-        {
-            if (comment != null)
-            {
-                NarratorController.Instance.Say(comment);
-            }
+            NarratorController.Instance.Say(this);
         }
     }
 }
