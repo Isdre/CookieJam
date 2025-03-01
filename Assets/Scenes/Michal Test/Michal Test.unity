@@ -1174,6 +1174,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86b75faa752d15e4db0fcb78918e95c2, type: 3}
+--- !u!1001 &3923691981705745864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253099642921098430, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629684992117189789, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
+      propertyPath: m_Name
+      value: Kilable Animal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fdf4a3a8556566e4680118f573e196ef, type: 3}
 --- !u!1001 &6985611621191590827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1348,3 +1405,4 @@ SceneRoots:
   - {fileID: 9130998943296077031}
   - {fileID: 811314683}
   - {fileID: 522430753484377525}
+  - {fileID: 3923691981705745864}
