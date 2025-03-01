@@ -182,11 +182,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd2b7933fcfa8d409610b33b92919ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sequenceDuration: 2
+  sequenceDuration: 3
   rotatingBody: {fileID: 1012253206734889184}
   rotationSpeed: 500
   bodyRenderer: {fileID: 131177826248464909}
-  colorizingDuration: 1.5
+  colorizingDuration: 8
   bloodyColor: {r: 0.78431374, g: 0, b: 0, a: 1}
   bloodParticles: {fileID: 2398807374517433639}
 --- !u!1001 &1590786790704285321
