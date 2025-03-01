@@ -11,11 +11,14 @@ public class StepOnIt : MonoBehaviour
         private Transform body;
 
         [SerializeField]
+        private float targetY = 0.4f;
+
+        [SerializeField]
         private float stepTime = 0.25f;
 
         public void Interact()
         {
-            body.DOScaleY(0.4f, stepTime);
+            body.DOScaleY(targetY, stepTime);
         }
     }
 }

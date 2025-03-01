@@ -16,7 +16,6 @@ namespace Forest {
                 if (instance != this) {
                     Destroy(instance.gameObject);
                     instance = this;
-                    mushroomCount = 0;
                 }
             }
             else instance = this;

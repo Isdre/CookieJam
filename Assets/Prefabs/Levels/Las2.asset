@@ -15,4 +15,4 @@ MonoBehaviour:
   LevelId: Las2
   NextLevelVariantId: Las1
   NextLevelId: Las1
-  LevelPrefab: {fileID: 1587029873750110639, guid: 5827a0474ff52f17096b96238895258f, type: 3}
+  LevelPrefab: {fileID: 6918206916837331268, guid: c246420ae2dda8549a5d4e13debc32a5, type: 3}
