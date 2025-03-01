@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 9.3
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: e2c9ab2c981194b4abc2ed0564cc50af, type: 3}
+    delayAfter: 0.2
+    message: "Analiza zako\u0144czona."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 5610ec65d2e4bcc4ab39ea664d949297, type: 3}
+    delayAfter: 0.4
+    message: "Dzia\u0142anie jednostki testowej: przestrzeganie zasad wymiany."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: d2067fda319171f499b6c9de015dc9e6, type: 3}
+    delayAfter: 0.3
+    message: "Zdolno\u015B\u0107 do rozr\xF3\u017Cnienia pomi\u0119dzy tym, co jest
+      dost\u0119pne, a tym, co wymaga zap\u0142aty."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: a0c0066f5c2518f4c97eb683f05bac10, type: 3}
+    delayAfter: 0.4
+    message: Analiza pozytywna.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 21a3729e67a461449a5558f41b67a95e, type: 3}
+    delayAfter: 0.4
+    message: "Decyzje w tej symulacji wskazuj\u0105 na umiej\u0119tno\u015B\u0107
+      przestrzegania wyznaczonych granic."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 1021c5c35e9e2b848992b36e1cd90efd, type: 3}
+    delayAfter: 0.2
+    message: "Test zako\u0144czony sukcesem."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 3cf4f4de9d7ca1e4887bb5a3a4deab6b, type: 3}
+    delayAfter: 1
+    message: "\u0141adowanie podsumowania."
+    delayPerLetter: 0.05

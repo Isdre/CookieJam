@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 5.2
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: fdbe01fcfd46091499cc002d26161ce6, type: 3}
+    delayAfter: 0.5
+    message: "Rejestrowanie zachowania\u2026"
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 0259b47b3c583814ba593e908d99e7d8, type: 3}
+    delayAfter: 0.8
+    message: Tolerowany poziom eksploracji.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 8cea8b9fd5d814e44aeac0c3012638b5, type: 3}
+    delayAfter: 0.9
+    message: "Ograniczenie wp\u0142ywu na \u015Brodowisko zachowane."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 0d55559ce8839594bbe58a52b5445cee, type: 3}
+    delayAfter: 0.5
+    message: Analiza pozytywna.
+    delayPerLetter: 0.05

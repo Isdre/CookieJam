@@ -1,0 +1,31 @@
+9.1.1; Minimalizuje liczbę obiektów.
+
+9.1.2; Punkt transakcji zostaje podświetlony.
+
+9.1.3; Ocena zdolności do interpretacji wyraźnych wskazówek systemowych.
+
+9.2.1; Analiza zakończona.
+
+9.2.2; Działanie jednostki testowej: ignorowanie zasad własności.
+
+9.2.3; Przekroczenie granicy pomiędzy tym, co dostępne, a tym, co należy do innych.
+
+9.2.4; Nie każda rzecz dostępna w otoczeniu jest przeznaczona dla jednostki.
+
+9.2.5; Test zakończony.
+
+9.2.6; Ładowanie podsumowania.
+
+9.3.1; Analiza zakończona.
+
+9.3.2; Działanie jednostki testowej: przestrzeganie zasad wymiany.
+
+9.3.3; Zdolność do rozróżnienia pomiędzy tym, co jest dostępne, a tym, co wymaga zapłaty.
+
+9.3.4; Analiza pozytywna.
+
+9.3.5; Decyzje w tej symulacji wskazują na umiejętność przestrzegania wyznaczonych granic.
+
+9.3.6; Test zakończony sukcesem.
+
+9.3.7; Ładowanie podsumowania.

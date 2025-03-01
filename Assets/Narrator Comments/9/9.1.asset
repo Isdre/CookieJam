@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 9.1
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: a0ec2ae4f03a5524c8c3923e02d1f95c, type: 3}
+    delayAfter: 0.4
+    message: "Minimalizuje liczb\u0119 obiekt\xF3w."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: f037549a8d646c14582d4e0e54c65ade, type: 3}
+    delayAfter: 0.4
+    message: "Punkt transakcji zostaje pod\u015Bwietlony."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 0b5454e22fdc4c7468b9bc63618d422e, type: 3}
+    delayAfter: 1
+    message: "Ocena zdolno\u015Bci do interpretacji wyra\u017Anych wskaz\xF3wek systemowych."
+    delayPerLetter: 0.06

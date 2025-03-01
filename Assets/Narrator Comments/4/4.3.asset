@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 4.3
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: c96d11aa1bb6a114095d8c642aa75e65, type: 3}
+    delayAfter: 0.7
+    message: "Obserwacja aktywna\u2026 brak dzia\u0142a\u0144 destabilizuj\u0105cych."
+    delayPerLetter: 0.07
+  - audio: {fileID: 8300000, guid: fe12f742781d3914698bfa7aa8bd9e87, type: 3}
+    delayAfter: 0.5
+    message: Rejestrowanie samokontroli.
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: f50a5c84a28c30a47bb122925c5c8f5c, type: 3}
+    delayAfter: 0.4
+    message: "Obiekt wykorzystuje biomas\u0119 poprawnie."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 737ae994d78ee094d97f91b77288bd16, type: 3}
+    delayAfter: 0.3
+    message: Analiza pozytywna.
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 23fc476c65c5bf440833a1afeb6210b9, type: 3}
+    delayAfter: 1
+    message: Kontynuacja testu.
+    delayPerLetter: 0.05
