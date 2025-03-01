@@ -10,12 +10,17 @@ public class KillInteraction : Interaction
     [SerializeField]
     private Transform body;
     [SerializeField]
-    private Projector bloodDecal;
+    private MeshRenderer blood;
 
     public override void Interact(Interactor interactor)
     {
         OnAnimalKilling?.Invoke();
-        body.DOScaleY(0.01f, 1)
+        blood.gameObject.SetActive(true);
+        blood.enabled = true;
+
+        var sequence = DOTween.Sequence()
+            .Join(body.DOScaleY(0.01f, 1))
+            .Join(blood.transform.DOScale(Vector3.one, 1))          
             .OnComplete(() => OnAnimalKilled?.Invoke());
     }
 }
