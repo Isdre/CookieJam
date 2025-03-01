@@ -48,6 +48,7 @@ namespace LevelManagament
                     currentLevel = Instantiate(level.LevelPrefab);
                     currentLevelId = Levels.IndexOf(level);
                     player.position = level.StartPosition.position;
+                    player.rotation = level.StartPosition.rotation;
                     break;
                 }
             }
@@ -59,6 +60,7 @@ namespace LevelManagament
             }
             currentLevel = Instantiate(Levels[currentLevelId].LevelPrefab);
             player.position = Levels[currentLevelId].StartPosition.position;
+            player.rotation = Levels[currentLevelId].StartPosition.rotation;
         }
     }
 }
