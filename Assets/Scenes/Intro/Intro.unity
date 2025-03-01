@@ -264,13 +264,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 733148277005086644, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 733148277005086644, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733148277005086644, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 733148277005086644, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2683424043205859205, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_Name
       value: Cutscene
       objectReference: {fileID: 0}
     - target: {fileID: 5860834826442784433, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
-      propertyPath: m_fontSize
-      value: 37.7
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860834826442784433, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5860834826442784433, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
       propertyPath: m_fontColor32.rgba
