@@ -10,8 +10,4 @@ public class Level : MonoBehaviour
     public string NextLevelId;
 
     public GameObject LevelPrefab;
-
-    private void Awake() {
-        LevelPrefab = this.gameObject;
-    }
 }
