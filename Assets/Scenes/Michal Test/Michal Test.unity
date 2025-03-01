@@ -135,9 +135,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 459693958519409807, guid: f5077e089b86e884aa05027e187e3322, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 459693958519409807, guid: f5077e089b86e884aa05027e187e3322, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 425251b90d7a3771881f49341cbc5487, type: 2}
     - target: {fileID: 2745431300356933250, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: m_Name
       value: Plac Baza
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663536579265698259, guid: f5077e089b86e884aa05027e187e3322, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663536579265698259, guid: f5077e089b86e884aa05027e187e3322, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.261
       objectReference: {fileID: 0}
     - target: {fileID: 8882523606040638387, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: m_LocalPosition.x
