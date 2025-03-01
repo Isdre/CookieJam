@@ -16,13 +16,10 @@ namespace Forest {
                 if (instance != this) {
                     Destroy(instance.gameObject);
                     instance = this;
+                    mushroomCount = 0;
                 }
             }
             else instance = this;
-        }
-
-        private void Start() {
-            mushroomCount = 0;
         }
 
         public void AddMushroom() {

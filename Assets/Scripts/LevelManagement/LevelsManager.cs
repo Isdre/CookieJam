@@ -45,12 +45,15 @@ namespace LevelManagement
                 currentLevelId = -1;
             }
             
+            
+
             foreach (LevelSO level in Levels) {
                 if (level.LevelId == id) {
                     currentLevel = Instantiate(level.LevelPrefab) as GameObject;
                     currentLevelId = Levels.IndexOf(level);
                     player.position = currentLevel.GetComponent<Level>().StartPosition.position;
-                    Debug.Log(currentLevel.GetComponent<Level>().StartPosition.position);
+                    Debug.Log(player.position);
+                    Physics.SyncTransforms();
                     player.rotation = currentLevel.GetComponent<Level>().StartPosition.rotation;
                     break;
                 }
@@ -59,11 +62,8 @@ namespace LevelManagement
 
         public void ResetLevel() {
             if (currentLevelId != -1) {
-                Destroy(currentLevel);
+                ChangeLevel(Levels[currentLevelId].LevelId);
             }
-            currentLevel = Instantiate(Levels[currentLevelId].LevelPrefab) as GameObject;
-            player.position = currentLevel.GetComponent<Level>().StartPosition.position;
-            player.rotation = currentLevel.GetComponent<Level>().StartPosition.rotation;
         }
     }
 }
