@@ -41,6 +41,8 @@ namespace LevelManagement
         public void ChangeLevel(string id) {
             if (currentLevelId != -1) {
                 Destroy(currentLevel);
+                currentLevel = null;
+                currentLevelId = -1;
             }
             
             foreach (LevelSO level in Levels) {
