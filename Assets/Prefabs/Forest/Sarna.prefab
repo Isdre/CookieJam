@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger:
-    serializedObject: {fileID: 0}
+    serializedObject: {fileID: 11400000, guid: 30fdfbe3da982994cb27535f397638b3, type: 2}
   _audio: {fileID: 1140845238588572407}
   body: {fileID: 1726629446664547983}
   fallingTime: 1
