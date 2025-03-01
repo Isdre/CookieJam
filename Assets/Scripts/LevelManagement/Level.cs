@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    public Vector3 startPosition;
+    public string LevelId;
+    public Transform StartPosition;
+    public string NextLevelVariantId;
+    public string NextLevelId;
+
+    public GameObject LevelPrefab;
 }

@@ -9,7 +9,9 @@ namespace LevelManagament
         public static LevelsManager Instance;
         [SerializeField] private Transform player;
 
-        public List<GameObject> Levels = new();
+        public List<GameObject> LevelsGameObjects = new();
+        private List<Level> Levels = new();
+
         private GameObject currentLevel;
         private int currentLevelId = -1;
 
@@ -17,26 +19,48 @@ namespace LevelManagament
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
+                foreach (GameObject level in LevelsGameObjects) {
+                    Level levelComponent = level.GetComponent<Level>();
+                    if (levelComponent != null) {
+                        Levels.Add(levelComponent);
+                    }
+                }
             } else if (Instance != this) {
                 Destroy(this);
             }
         }
 
-        public void ChangeLevel(int id) {
+        public void NextLevel() {
+            ChangeLevel(Levels[currentLevelId].NextLevelId);
+        }
+
+        public void NextLevelVariant() {
+            ChangeLevel(Levels[currentLevelId].NextLevelVariantId);
+        }
+
+        public void ChangeLevel(string id) {
             if (currentLevelId != -1) {
                 Destroy(currentLevel);
             }
-            currentLevel = Instantiate(Levels[id]);
-            currentLevelId = id;
-            player.position = currentLevel.GetComponent<Level>().startPosition;
+            
+            foreach (Level level in Levels) {
+                if (level.LevelId == id) {
+                    currentLevel = Instantiate(level.LevelPrefab);
+                    currentLevelId = Levels.IndexOf(level);
+                    player.position = level.StartPosition.position;
+                    player.rotation = level.StartPosition.rotation;
+                    break;
+                }
+            }
         }
 
         public void ResetLevel() {
-            if (currentLevel != null) {
+            if (currentLevelId != -1) {
                 Destroy(currentLevel);
             }
-            currentLevel = Instantiate(Levels[currentLevelId]);
-            player.position = currentLevel.GetComponent<Level>().startPosition;
+            currentLevel = Instantiate(Levels[currentLevelId].LevelPrefab);
+            player.position = Levels[currentLevelId].StartPosition.position;
+            player.rotation = Levels[currentLevelId].StartPosition.rotation;
         }
     }
 }
