@@ -14,6 +14,7 @@ public class CutTree  : Interaction
 
         public override void Interact(Interactor interactor)
         {
+            Debug.Log("Cutting tree");
             Vector3 treePos = new Vector3(tree.position.x, 0f, tree.position.z);
             Vector3 playerPos = new Vector3(interactor.transform.position.x, 0f, interactor.transform.position.z);
 
@@ -27,6 +28,7 @@ public class CutTree  : Interaction
 
 
         private IEnumerator TreeFalling(Quaternion start,Quaternion target) {
+        Debug.Log("Cutting tree");
         float fallingTimer = 0f;
         while (fallingTimer < fallingTime) {
             fallingTimer += Time.deltaTime;
