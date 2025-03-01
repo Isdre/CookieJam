@@ -43,7 +43,7 @@ public class GirlRigidbodyFallDetector : MonoBehaviour
                     body.parent = scalingTransform;
 
                     squeezeDeathSequence.SqueezedBody = scalingTransform;
-                    squeezeDeathSequence.Squeeze();
+                    squeezeDeathSequence.Play();
                 });
         }
     }

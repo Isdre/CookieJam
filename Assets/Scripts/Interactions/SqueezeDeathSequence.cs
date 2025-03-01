@@ -1,10 +1,17 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
-public class SqueezeDeathSequence : MonoBehaviour
+public abstract class DeathSequence : MonoBehaviour
 {
     public event System.Action OnSequenceFinished;
 
+    public abstract void Play();
+
+    protected void Completed() => OnSequenceFinished?.Invoke();
+}
+
+public class SqueezeDeathSequence : DeathSequence
+{
     [SerializeField]
     private float duration = 0.5f;
 
@@ -25,7 +32,7 @@ public class SqueezeDeathSequence : MonoBehaviour
     [SerializeField]
     private ParticleSystem bloodParticles;
 
-    public void Squeeze()
+    public override void Play()
     {
         if (blood)
         {
@@ -40,7 +47,7 @@ public class SqueezeDeathSequence : MonoBehaviour
                 .OnComplete(() =>
         {
             bloodParticles?.Stop();
-            OnSequenceFinished?.Invoke();
+            Completed();
         });
     }
 
