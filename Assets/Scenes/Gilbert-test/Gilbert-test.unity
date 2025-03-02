@@ -6409,6 +6409,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6038473597564085476, guid: 86b75faa752d15e4db0fcb78918e95c2, type: 3}
   m_PrefabInstance: {fileID: 2062276913}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &529781035
 GameObject:
   m_ObjectHideFlags: 0
@@ -11139,6 +11140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactions: []
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &971982880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20217,7 +20220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4528445337615700757, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
       propertyPath: StartLevelId
-      value: Sklep1
+      value: Las1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24527,6 +24530,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 565112514680772867, guid: 86b75faa752d15e4db0fcb78918e95c2, type: 3}
   m_PrefabInstance: {fileID: 2062276913}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &2093542699
 GameObject:
   m_ObjectHideFlags: 0
@@ -25416,6 +25420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactions: []
+=======
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -25426,6 +25432,7 @@ SceneRoots:
   - {fileID: 971982880}
   - {fileID: 323467123}
   - {fileID: 437712162}
+<<<<<<< Updated upstream
   - {fileID: 1385761766}
   - {fileID: 1206129794}
   - {fileID: 1774466924}
@@ -25529,3 +25536,5 @@ SceneRoots:
   - {fileID: 578180467}
   - {fileID: 1151723844}
   - {fileID: 976924318}
+=======
+>>>>>>> Stashed changes

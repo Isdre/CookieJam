@@ -15,4 +15,8 @@ MonoBehaviour:
   LevelId: Sklep2
   NextLevelVariantId: Sklep3
   NextLevelId: End
+<<<<<<< Updated upstream
   LevelPrefab: {fileID: 5174955920741676494, guid: 9d625cbeb6de6384390c2a3ca212d42a, type: 3}
+=======
+  LevelPrefab: {fileID: 5345116919079924895, guid: 2ea1793bf18c61b44a521fbccc4272d7, type: 3}
+>>>>>>> Stashed changes

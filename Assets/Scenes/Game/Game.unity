@@ -355,6 +355,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2062276914}
     - target: {fileID: 760238490094930012, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
+      propertyPath: Levels.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 760238490094930012, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
+      propertyPath: Levels.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ab2ffdeb0e56fd44b1a8c2e455559cc, type: 2}
+    - target: {fileID: 760238490094930012, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
       propertyPath: LevelsGameObjects.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -414,10 +422,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 4528445337615700757, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
       propertyPath: StartLevelId
       value: Las3
       objectReference: {fileID: 0}
+=======
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 4528445337615700757, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
+      propertyPath: StartLevelId
+      value: Sklep1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

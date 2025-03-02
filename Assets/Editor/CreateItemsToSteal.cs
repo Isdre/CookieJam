@@ -50,6 +50,7 @@ public class CreateItemsToSteal : MonoBehaviour
             }
 
 
+<<<<<<< Updated upstream
             // Add HighlightController.cs to Body
             if (body.GetComponent<HighlightController>() == null)
             {
@@ -64,6 +65,10 @@ public class CreateItemsToSteal : MonoBehaviour
             {
                 item.gameObject.AddComponent<Outline>();
             }
+=======
+            rt.OnRayEnter += () => { hc.IsHighlighted = true; };
+            rt.OnRayExit += () => { hc.IsHighlighted = false; };
+>>>>>>> Stashed changes
 
             // Create "Interactive Object" as a child of "Body"
             GameObject interactiveObject = new GameObject("Interactive Object");
