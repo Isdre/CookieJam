@@ -1,15 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace LevelManagement{
     public class ValidateLevel : MonoBehaviour
     {
-        [ContextMenu("Fix scales")]
         private void Awake() {
-            foreach (var collider in GetComponentsInChildren<Collider>()) {
-                collider.transform.localScale = new Vector3(
-                    Mathf.Abs(collider.transform.localScale.x),
-                    Mathf.Abs(collider.transform.localScale.y),
-                    Mathf.Abs(collider.transform.localScale.z));
+            foreach (Transform child in transform) {
+                child.localScale = new Vector3(Mathf.Abs(child.localScale.x),Mathf.Abs(child.localScale.y),Mathf.Abs(child.localScale.z));
             }
         }
     }

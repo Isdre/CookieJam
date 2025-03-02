@@ -12,7 +12,6 @@ namespace Shop
 
         public override void Interact(Interactor interactor){
             OnInteract.Invoke();
-            OnInteract.RemoveAllListeners();
         }
     }
 }
