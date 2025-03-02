@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelId: Sklep1
   NextLevelVariantId: Sklep2
-  NextLevelId: Sklep2
+  NextLevelId: End
   LevelPrefab: {fileID: 5383355109027923319, guid: 4c32daa378577324ab875c0b70ec6a3e, type: 3}
