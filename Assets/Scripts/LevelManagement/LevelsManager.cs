@@ -13,7 +13,7 @@ namespace LevelManagement
         public static event System.Action OnLevelLoaded;
 
         public static LevelsManager Instance;
-        [SerializeField] private Transform player;
+        [SerializeField] private PlayerMovement player;
 
         public List<LevelSO> Levels = new();
 
@@ -60,10 +60,13 @@ namespace LevelManagement
         {
             if (currentLevelId != -1) {
                 OnLevelUnloading?.Invoke();
-                yield return new WaitForSeconds(destroingLevelDuration);
+                yield return new WaitForSeconds(destroingLevelDuration / 3f);
+                player.enabled = false;
+                yield return new WaitForSeconds(destroingLevelDuration / 3f);
                 Destroy(currentLevel.gameObject);
                 currentLevel = null;
                 currentLevelId = -1;
+                yield return new WaitForSeconds(destroingLevelDuration / 3f);
                 OnLevelUnloaded?.Invoke();
             }
 
@@ -75,13 +78,12 @@ namespace LevelManagement
                     yield return new WaitForSeconds(loadingLevelDuration * 0.5f);
                     currentLevel = Instantiate(level.LevelPrefab);
                     currentLevelId = Levels.IndexOf(level);
-                    player.position = currentLevel.StartPosition.position;
-                    Debug.Log(player.position);
+                    player.transform.position = currentLevel.StartPosition.position;
+                    Debug.Log(player.transform.position);
                     Physics.SyncTransforms();
-                    player.rotation = Quaternion.AngleAxis(currentLevel.StartPosition.eulerAngles.y, Vector3.up);
-                    var playerMovement = player.GetComponent<PlayerMovement>();
-                    playerMovement.ResetHead();
-                    playerMovement.enabled = false;
+                    player.transform.rotation = Quaternion.AngleAxis(currentLevel.StartPosition.eulerAngles.y, Vector3.up);
+                    player.ResetHead();
+                    player.enabled = false;
                     yield return new WaitForSeconds(loadingLevelDuration * 0.5f);
                     OnLevelLoaded?.Invoke();
                     break;
