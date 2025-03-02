@@ -15,4 +15,4 @@ MonoBehaviour:
   LevelId: Sklep3
   NextLevelVariantId: End
   NextLevelId: End
-  LevelPrefab: {fileID: 3933693250141585378, guid: 4e1c917a9324b45459c2fcb9289ff7fe, type: 3}
+  LevelPrefab: {fileID: 2078822348761076745, guid: 4e1c917a9324b45459c2fcb9289ff7fe, type: 3}
