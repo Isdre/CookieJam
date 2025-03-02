@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Level : MonoBehaviour
+namespace LevelManagement
 {
-    public string LevelId;
-    public Transform StartPosition;
-    public string NextLevelVariantId;
-    public string NextLevelId;
+    public class Level : MonoBehaviour
+    {
+        public Transform StartPosition;
 
-    public GameObject LevelPrefab;
+
+
+    }
 }

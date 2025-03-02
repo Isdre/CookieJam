@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 8.2
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: f7b2a6cccf306f04eac8b08564b4bf5b, type: 3}
+    delayAfter: 0.2
+    message: "Analiza zako\u0144czona."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 11c7377a02dd0cc48aeab3229aaa34fa, type: 3}
+    delayAfter: 0.3
+    message: "Dzia\u0142anie jednostki testowej: interakcja z zasobami bez uwzgl\u0119dnienia
+      zasad."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 86b05357973e9ff4fb49ead9eeaa5131, type: 3}
+    delayAfter: 0.4
+    message: "Interpretacja: brak zdolno\u015Bci do rozr\xF3\u017Cniania granic w\u0142asno\u015Bci."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 7fd881edbcf6b7842a75c6cf51fb3d4e, type: 3}
+    delayAfter: 0.4
+    message: "Test zako\u0144czony."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: e76d152bdca5dd74b9c5b9c642f76173, type: 3}
+    delayAfter: 1
+    message: Resetowanie symulacji.
+    delayPerLetter: 0.05

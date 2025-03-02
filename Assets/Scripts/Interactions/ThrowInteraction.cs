@@ -6,14 +6,15 @@ public class ThrowInteraction : Interaction
     [SerializeField]
     private Rigidbody fallingBody;
     [SerializeField]
-    private float pushForce = 10;
+    private Vector3 pushForce;
+    [SerializeField]
+    private Vector3 pushTorque;
 
     public override void Interact(Interactor interactor)
     {
         fallingBody.isKinematic = false;
         fallingBody.useGravity = true;  
-        fallingBody.AddRelativeForce(Vector3.forward * pushForce, ForceMode.Impulse);
+        fallingBody.AddRelativeForce(pushForce, ForceMode.Impulse);
+        fallingBody.AddRelativeTorque(pushTorque, ForceMode.Impulse);
     }
-
-
 }

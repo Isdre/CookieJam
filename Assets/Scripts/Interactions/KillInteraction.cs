@@ -1,31 +1,32 @@
 using Bipolar.InteractionSystem;
 using Bipolar.RaycastSystem;
-using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class KillInteraction : Interaction
 {
     public static event System.Action OnAnimalKilling;
     public static event System.Action OnAnimalKilled;
 
-    [SerializeField]
-    private Transform body;
-    [SerializeField]
-    private MeshRenderer blood;
+    [SerializeField, FormerlySerializedAs("squeezeDeathSequence")]
+    private DeathSequence deathSequence;
+
     [SerializeField]
     private RaycastTarget raycastTargetToDisable;
 
     public override void Interact(Interactor interactor)
     {
         OnAnimalKilling?.Invoke();
-        raycastTargetToDisable.enabled = false;
-        blood.gameObject.SetActive(true);
-        blood.enabled = true;
+        if (raycastTargetToDisable)
+            raycastTargetToDisable.enabled = false;
 
-        var sequence = DOTween.Sequence()
-            .Join(body.DOScaleY(0.01f, 1))
-            .Join(blood.transform.DOScale(Vector3.one, 1))          
-            .OnComplete(() => OnAnimalKilled?.Invoke());
+        deathSequence.OnSequenceFinished += DeathSequence_OnSequenceFinished;
+        deathSequence.Play();
+    }
 
+    private void DeathSequence_OnSequenceFinished()
+    {
+        deathSequence.OnSequenceFinished -= DeathSequence_OnSequenceFinished;
+        OnAnimalKilled?.Invoke();
     }
 }

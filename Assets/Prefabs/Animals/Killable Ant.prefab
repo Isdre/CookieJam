@@ -52,10 +52,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blood
       objectReference: {fileID: 0}
+    - target: {fileID: 3780270955164652384, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      propertyPath: ShapeModule.type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780270955164652384, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780270955164652384, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      propertyPath: ShapeModule.arc.spread
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780270955164652384, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780270955164652384, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4978227477907294369, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: message
       value: Dotknij
       objectReference: {fileID: 0}
+    - target: {fileID: 5633353908285835585, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      propertyPath: squeezeDeathSequence
+      value: 
+      objectReference: {fileID: 2087806491847785748}
     - target: {fileID: 7274115367845429142, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: m_Name
       value: Killable Ant
@@ -71,6 +95,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5249242423637015961}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7918051955861871486, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2087806491847785748}
     - targetCorrespondingSourceObject: {fileID: 1320727887409985687, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2586385512468041581}
@@ -136,17 +163,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382fe2ad91461ee4c8caf27eed0a2538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!198 &4136264986508132459 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3780270955164652384, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+  m_PrefabInstance: {fileID: 941480404427526923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4845168381655734858 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5633353908285835585, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
   m_PrefabInstance: {fileID: 941480404427526923}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6985748492117280885}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bd0782be0492ea498190e3429d3b309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &6281553967192812291 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6502176956234987528, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+  m_PrefabInstance: {fileID: 941480404427526923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6985748492117280885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7918051955861871486, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+  m_PrefabInstance: {fileID: 941480404427526923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2087806491847785748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985748492117280885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fb87e6ba2c25745bda8ea44aca365b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  squeezedBody: {fileID: 1594431925754795436}
+  blood: {fileID: 6281553967192812291}
+  bloodScale: {x: 1, y: 1, z: 1}
+  bloodParticles: {fileID: 4136264986508132459}
 --- !u!1001 &5716113911899888242
 PrefabInstance:
   m_ObjectHideFlags: 0
