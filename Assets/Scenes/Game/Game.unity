@@ -355,14 +355,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2062276914}
     - target: {fileID: 760238490094930012, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
-      propertyPath: Levels.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 760238490094930012, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
-      propertyPath: Levels.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9866f581ed1da374ca0911ffa3c87c1f, type: 2}
-    - target: {fileID: 760238490094930012, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
       propertyPath: LevelsGameObjects.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -417,6 +409,10 @@ PrefabInstance:
     - target: {fileID: 4245954570355749149, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245954570355749149, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4528445337615700757, guid: 7be98f224e921d450ba098df6ac2a414, type: 3}
       propertyPath: StartLevelId
