@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4688726135809994066}
+  - component: {fileID: 7722382812935403995}
   - component: {fileID: 8388835826836302757}
   m_Layer: 0
   m_Name: Interactive Object
@@ -33,6 +34,20 @@ Transform:
   - {fileID: 1741992143553080569}
   m_Father: {fileID: 2836860385008957976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7722382812935403995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179645695173882940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87ec791bfeb8ec4996109dcb4a6ce60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactions:
+  - {fileID: 1056037275752468179}
 --- !u!114 &8388835826836302757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f539827135263006db5c0b42f26236c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger:
+    serializedObject: {fileID: 11400000, guid: 30fdfbe3da982994cb27535f397638b3, type: 2}
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
   body: {fileID: 2615494121860068249}
+  targetY: 0.4
   stepTime: 0.25
 --- !u!1 &5243376721599058679
 GameObject:
@@ -314,12 +335,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f320356ad14d7da519bbaf59f790ff9e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2298234201676560006}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f320356ad14d7da519bbaf59f790ff9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8283302601287139075}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f320356ad14d7da519bbaf59f790ff9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1164162942042558057}
   m_SourcePrefab: {fileID: 100100000, guid: f320356ad14d7da519bbaf59f790ff9e, type: 3}
 --- !u!1 &2704525459382755487 stripped
 GameObject:
@@ -344,54 +359,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &8283302601287139075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2704525459382755487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50c18fa421c1053ed8c41882f7159b58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interaction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1056037275752468179}
-        m_TargetAssemblyTypeName: Forest.StepOnIt, Assembly-CSharp
-        m_MethodName: Interact
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!135 &1164162942042558057
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2704525459382755487}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &3369738431276136997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f320356ad14d7da519bbaf59f790ff9e, type: 3}

@@ -58,6 +58,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f539827135263006db5c0b42f26236c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger:
+    serializedObject: {fileID: 11400000, guid: 30fdfbe3da982994cb27535f397638b3, type: 2}
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
   body: {fileID: 19896892765964127}
   targetY: 0.1
   stepTime: 0.25
@@ -70,6 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7285444866642745748}
+  - component: {fileID: 1725091096199403452}
   - component: {fileID: 5792064151950040931}
   m_Layer: 0
   m_Name: Interactive Object
@@ -94,6 +100,20 @@ Transform:
   - {fileID: 4334264621161830463}
   m_Father: {fileID: 239860011565731550}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1725091096199403452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770998942398152954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87ec791bfeb8ec4996109dcb4a6ce60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactions:
+  - {fileID: 3075226662232160789}
 --- !u!114 &5792064151950040931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +244,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.3
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.17, z: 0}
 --- !u!114 &7807242452041453867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,13 +330,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30e2c9eeca2c35a6489e771b0c4b172f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 76601853615208036}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30e2c9eeca2c35a6489e771b0c4b172f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5025584325476004829}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30e2c9eeca2c35a6489e771b0c4b172f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9190347631130939195}
   m_SourcePrefab: {fileID: 100100000, guid: 30e2c9eeca2c35a6489e771b0c4b172f, type: 3}
 --- !u!4 &4002660362581343209 stripped
 Transform:
@@ -328,33 +342,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 30e2c9eeca2c35a6489e771b0c4b172f, type: 3}
   m_PrefabInstance: {fileID: 3460725054496513026}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &76601853615208036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379643744849371475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50c18fa421c1053ed8c41882f7159b58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interaction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3075226662232160789}
-        m_TargetAssemblyTypeName: Forest.StepOnIt, Assembly-CSharp
-        m_MethodName: Interact
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &5025584325476004829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,24 +360,3 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!135 &9190347631130939195
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379643744849371475}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.003
-  m_Center: {x: -0.00005199276, y: -0.00009013898, z: 0.0019770558}
