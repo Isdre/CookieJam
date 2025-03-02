@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e604cdf6b410ed072bbaff30862e2c6c, type: 3}
-  m_Name: Sklep1
+  m_Name: Sklep3
   m_EditorClassIdentifier: 
-  LevelId: Sklep1
-  NextLevelVariantId: Sklep2
+  LevelId: Sklep3
+  NextLevelVariantId: End
   NextLevelId: End
-  LevelPrefab: {fileID: 6988381770918047388, guid: 4c32daa378577324ab875c0b70ec6a3e, type: 3}
+  LevelPrefab: {fileID: 4857433777922387946, guid: d424159f6f3cc9b43aa42dea56920642, type: 3}
