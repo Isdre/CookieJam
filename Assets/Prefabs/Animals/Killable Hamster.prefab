@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3715982190183721338, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: message
-      value: Turlaj chomika
+      value: "Skr\u0119\u0107 kark"
       objectReference: {fileID: 0}
     - target: {fileID: 5633353908285835585, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: deathSequence
