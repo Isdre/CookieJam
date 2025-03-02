@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comments:
   - audio: {fileID: 8300000, guid: fdbe01fcfd46091499cc002d26161ce6, type: 3}
-    delayAfter: 0.5
+    delayAfter: 3
     message: "Rejestrowanie zachowania\u2026"
     delayPerLetter: 0.06
   - audio: {fileID: 8300000, guid: 0259b47b3c583814ba593e908d99e7d8, type: 3}

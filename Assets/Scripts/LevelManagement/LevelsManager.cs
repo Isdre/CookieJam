@@ -12,6 +12,8 @@ namespace LevelManagement
 
         public List<LevelSO> Levels = new();
 
+        public int triesCount;
+
         [SerializeField]
         private GameObject currentLevel;
         private int currentLevelId = -1;
@@ -29,6 +31,8 @@ namespace LevelManagement
             if (currentLevelId == -1) {
                 return;
             }
+            PlayerPrefs.SetInt(Levels[currentLevelId].LevelId, triesCount);
+            triesCount = 0;
             ChangeLevel(Levels[currentLevelId].NextLevelId);
         }
 
@@ -64,9 +68,14 @@ namespace LevelManagement
 
         public void ResetLevel() {
             NarratorController.ClearEvents();  
-            if (currentLevelId != -1) {
-                ChangeLevel(Levels[currentLevelId].LevelId);
+            if (currentLevelId == -1) {
+                return;
             }
+            triesCount++;
+            if (triesCount == 3) {
+                NextLevel();
+            }
+            else ChangeLevel(Levels[currentLevelId].LevelId);
         }
     }
 }
