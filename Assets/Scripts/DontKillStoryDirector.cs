@@ -103,7 +103,7 @@ public class DontKillStoryDirector : MonoBehaviour
 
     private void Win()
     {
-        LevelsManager.Instance.NextLevelVariant();
+        LevelsManager.Instance.NextLevel();
     }
 
     private void Lose()
