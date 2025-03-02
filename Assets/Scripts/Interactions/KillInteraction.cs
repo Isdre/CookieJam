@@ -19,14 +19,17 @@ public class KillInteraction : Interaction
         OnAnimalKilling?.Invoke();
         if (raycastTargetToDisable)
             raycastTargetToDisable.enabled = false;
-
-        deathSequence.OnSequenceFinished += DeathSequence_OnSequenceFinished;
-        deathSequence.Play();
+        if (deathSequence)
+        {
+            deathSequence.OnSequenceFinished += DeathSequence_OnSequenceFinished;
+            deathSequence.Play();
+        }
     }
 
     private void DeathSequence_OnSequenceFinished()
     {
-        deathSequence.OnSequenceFinished -= DeathSequence_OnSequenceFinished;
+        if (deathSequence)
+            deathSequence.OnSequenceFinished -= DeathSequence_OnSequenceFinished;
         OnAnimalKilled?.Invoke();
     }
 }

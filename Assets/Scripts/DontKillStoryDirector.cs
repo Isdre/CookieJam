@@ -1,5 +1,6 @@
 using LevelManagement;
 using Narrator;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -30,15 +31,22 @@ public class DontKillStoryDirector : MonoBehaviour
         player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         KillInteraction.OnAnimalKilling += KillInteraction_OnAnimalKilling;
         yield return new WaitForSeconds(initialNarratorSequenceDelay);
-        initialNarratorSequence.Say();
+        NarratorController.OnSequenceEnded += StartWaitingForWinningSequence;
+        NarratorController.Instance.Say(initialNarratorSequence);
         yield return new WaitForSeconds(enablePlayerMovementDelay);
         player.enabled = true;
+    }
+
+    private void StartWaitingForWinningSequence(NarratorCommentSequence sequence)
+    {
+        NarratorController.OnSequenceEnded -= StartWaitingForWinningSequence;
         Invoke(nameof(StartSayingWinningCommentSequence), waitingDuration);
     }
 
     private void KillInteraction_OnAnimalKilling()
     {
         KillInteraction.OnAnimalKilling -= KillInteraction_OnAnimalKilling;
+        NarratorController.OnSequenceEnded -= StartWaitingForWinningSequence;
         player.enabled = false;
         CancelInvoke();
         NarratorController.Instance.Stop();
