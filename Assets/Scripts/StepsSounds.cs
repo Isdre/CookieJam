@@ -12,8 +12,10 @@ public class StepsSounds : MonoBehaviour
     [SerializeField]
     private LayerMask steppableLayers;
 
+    [Header("States")]
+    [SerializeField]
     private Vector3 previousPosition;
-
+    [SerializeField]
     private bool isOnFloor;
 
     private void Awake()
