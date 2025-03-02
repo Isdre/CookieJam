@@ -69,7 +69,14 @@ public class DontStealStoryDirector : MonoBehaviour
     }
     
     public void LostOnSteal() {
+        foreach (var item in itemsToSteal)
+            item.OnInteract.RemoveListener(TakeItem);
         
+        foreach (var door in exitDoors)
+            door.OnInteract.RemoveListener(Leave);
+        
+        foreach (var c in cashiers)
+            c.OnInteract.RemoveListener(Pay);
         player.enabled = false;
         NarratorController.Instance.Stop();
         NarratorController.OnSequenceEnded -= WinAfterTalking;
@@ -92,6 +99,14 @@ public class DontStealStoryDirector : MonoBehaviour
 
     private void WinAfterTalking(NarratorCommentSequence sequence)
     {
+        foreach (var item in itemsToSteal)
+            item.OnInteract.RemoveListener(TakeItem);
+        
+        foreach (var door in exitDoors)
+            door.OnInteract.RemoveListener(Leave);
+        
+        foreach (var c in cashiers)
+            c.OnInteract.RemoveListener(Pay);
         NarratorController.OnSequenceEnded -= WinAfterTalking;
         Win();
     }
