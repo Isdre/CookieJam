@@ -14,6 +14,11 @@ public class SkipCutscene : MonoBehaviour
     private bool _changeScene;
     private Coroutine _coroutine;
 
+    private void Start()
+    {
+        videoPlayer.Play();
+    }
+
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if(_changeScene) {

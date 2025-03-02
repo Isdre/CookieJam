@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 4d7afc075b4381945ba9925e0b76c92a
+guid: 06cd32d79a501c6478a85b2f7c3d0237
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Hamster
-    second: {fileID: 2100000, guid: 9076caba699d3a942b5ec7f2db2e6ee4, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -37,7 +32,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
