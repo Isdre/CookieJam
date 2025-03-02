@@ -128,7 +128,8 @@ namespace Bipolar.RaycastSystem
             if (target != null)
             {
                 OnRayExited?.Invoke(target);
-                target.RayExit();
+                if (target.enabled)
+                    target.RayExit();
             }
         }
 

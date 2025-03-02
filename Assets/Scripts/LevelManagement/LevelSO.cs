@@ -8,6 +8,6 @@ namespace LevelManagement{
         public string NextLevelVariantId;
         public string NextLevelId;
 
-        public GameObject LevelPrefab;
+        public Level LevelPrefab;
     }
 }

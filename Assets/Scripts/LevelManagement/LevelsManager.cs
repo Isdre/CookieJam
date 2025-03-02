@@ -7,17 +7,26 @@ namespace LevelManagement
 {
     public class LevelsManager : MonoBehaviour
     {
+        public static event System.Action OnLevelUnloading;
+        public static event System.Action OnLevelUnloaded;
+        public static event System.Action OnLevelLoading;
+        public static event System.Action OnLevelLoaded;
+
         public static LevelsManager Instance;
-        [SerializeField] private Transform player;
+        [SerializeField] private PlayerMovement player;
 
         public List<LevelSO> Levels = new();
 
         public int triesCount;
 
         [SerializeField]
-        private GameObject currentLevel;
+        private Level currentLevel;
         private int currentLevelId = -1;
 
+        [SerializeField]
+        private float destroingLevelDuration;
+        [SerializeField]
+        private float loadingLevelDuration;
 
         private void Awake() {
             if (Instance == null) {
@@ -43,24 +52,39 @@ namespace LevelManagement
             ChangeLevel(Levels[currentLevelId].NextLevelVariantId);
         }
 
-        public void ChangeLevel(string id) {
+        public void ChangeLevel(string id)
+        {
+            StartCoroutine(ChangingLevelCo(id));
+        }
+
+        private IEnumerator ChangingLevelCo(string id)
+        {
             if (currentLevelId != -1) {
-                Destroy(currentLevel);
+                OnLevelUnloading?.Invoke();
+                player.enabled = false;
+                yield return new WaitForSeconds(destroingLevelDuration);
+                Destroy(currentLevel.gameObject);
                 currentLevel = null;
                 currentLevelId = -1;
+                OnLevelUnloaded?.Invoke();
             }
-            
-            
 
-            foreach (LevelSO level in Levels) {
-                if (level.LevelId == id) {
-                    currentLevel = Instantiate(level.LevelPrefab) as GameObject;
+            foreach (LevelSO level in Levels)
+            {
+                if (level.LevelId == id)
+                {
+                    OnLevelLoading?.Invoke();
+                    yield return new WaitForSeconds(loadingLevelDuration * 0.5f);
+                    currentLevel = Instantiate(level.LevelPrefab);
                     currentLevelId = Levels.IndexOf(level);
-                    player.position = currentLevel.GetComponent<Level>().StartPosition.position;
-                    Debug.Log(player.position);
+                    player.transform.position = currentLevel.StartPosition.position;
+                    Debug.Log(player.transform.position);
                     Physics.SyncTransforms();
-                    player.rotation = currentLevel.GetComponent<Level>().StartPosition.rotation;
-                    player.GetComponent<PlayerMovement>().enabled = false;
+                    player.transform.rotation = Quaternion.AngleAxis(currentLevel.StartPosition.eulerAngles.y, Vector3.up);
+                    player.ResetHead();
+                    player.enabled = false;
+                    yield return new WaitForSeconds(loadingLevelDuration * 0.5f);
+                    OnLevelLoaded?.Invoke();
                     break;
                 }
             }
@@ -72,7 +96,7 @@ namespace LevelManagement
                 return;
             }
             triesCount++;
-            if (triesCount == 3) {
+            if (triesCount == 1) {
                 NextLevel();
             }
             else ChangeLevel(Levels[currentLevelId].LevelId);

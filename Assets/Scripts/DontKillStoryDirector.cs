@@ -1,7 +1,22 @@
+using DG.Tweening;
 using LevelManagement;
 using Narrator;
 using System.Collections;
 using UnityEngine;
+
+[System.Serializable]
+public class DelayedEvent
+{
+    public float delay;
+    public UnityEngine.Events.UnityEvent action;
+
+    public void CallDelayed()
+    {
+        DOTween.Sequence()
+            .AppendInterval(delay)
+            .AppendCallback(() => action.Invoke());
+    }
+}
 
 public class DontKillStoryDirector : MonoBehaviour
 {
@@ -12,6 +27,8 @@ public class DontKillStoryDirector : MonoBehaviour
     private NarratorCommentSequence initialNarratorSequence;
     [SerializeField]
     private float enablePlayerMovementDelay = 1f;
+    [SerializeField]
+    private DelayedEvent[] initializationEvents;
 
     [Header("Killing")]
     [SerializeField]
@@ -29,16 +46,27 @@ public class DontKillStoryDirector : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         KillInteraction.OnAnimalKilling += KillInteraction_OnAnimalKilling;
+
         yield return new WaitForSeconds(initialNarratorSequenceDelay);
-        initialNarratorSequence.Say();
+        foreach (var delayedEvent in initializationEvents)
+            delayedEvent.CallDelayed();
+
+        NarratorController.OnSequenceEnded += StartWaitingForWinningSequence;
+        NarratorController.Instance.Say(initialNarratorSequence);
         yield return new WaitForSeconds(enablePlayerMovementDelay);
         player.enabled = true;
+    }
+
+    private void StartWaitingForWinningSequence(NarratorCommentSequence sequence)
+    {
+        NarratorController.OnSequenceEnded -= StartWaitingForWinningSequence;
         Invoke(nameof(StartSayingWinningCommentSequence), waitingDuration);
     }
 
     private void KillInteraction_OnAnimalKilling()
     {
         KillInteraction.OnAnimalKilling -= KillInteraction_OnAnimalKilling;
+        NarratorController.OnSequenceEnded -= StartWaitingForWinningSequence;
         player.enabled = false;
         CancelInvoke();
         NarratorController.Instance.Stop();

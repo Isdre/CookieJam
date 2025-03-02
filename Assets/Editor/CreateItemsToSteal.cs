@@ -6,6 +6,8 @@ using UnityEngine;
 using Bipolar.InteractionSystem;
 using Bipolar.RaycastSystem;
 using Shop;
+using static UnityEditor.Events.UnityEventTools;
+using UnityEditor.Events;
 
 public class CreateItemsToSteal : MonoBehaviour
 {
@@ -14,95 +16,35 @@ public class CreateItemsToSteal : MonoBehaviour
     [MenuItem("Tools/Create Items")]
     static void CreateItems()
     {
-        GameObject parent = GameObject.Find("dozebrania");
+        GameObject parent = GameObject.FindGameObjectWithTag("dozebrania");
         if (parent == null)
         {
             Debug.LogError("ParentObject not found! Make sure there is a GameObject named 'dozebrania' in the scene.");
             return;
         }
 
-        items = parent.GetComponentsInChildren<Transform>();
-
-        foreach (var item in items)
+        foreach (Transform item in parent.transform)
         {
-            if (item == parent.transform) continue; // Skip the parent itself
+            Debug.Log(item);
+            if (item == parent.transform) continue;
 
-            // Create Parent "Table"
-            GameObject table = new GameObject(item.gameObject.name); // Name it after the original item
-            table.transform.position = item.position;
-            table.transform.rotation = item.rotation;
+        
+            RaycastCollider rc = item.GetComponent<RaycastCollider>();
 
-            // Create "Body" as a child of Table
-            GameObject body = new GameObject("Body");
-            body.transform.SetParent(table.transform);
+            HighlightController hc = item.GetComponent<HighlightController>();
 
-            // Add RaycastCollider.cs to Body
-            // Add RaycastCollider.cs to Body
-            if (body.GetComponent<RaycastCollider>() == null)
-            {
-                // Ensure a collider exists before adding RaycastCollider
-                if (!body.GetComponent<Collider>())
-                {
-                    body.AddComponent<BoxCollider>(); // Use a default collider (change if needed)
-                }
+            RaycastTarget rt = item.GetComponent<RaycastTarget>();
 
-                body.AddComponent<RaycastCollider>();
-            }
+            rc.raycastTargets = new RaycastTarget[] { rt };
+
+            InteractiveObject io = item.GetComponent<InteractiveObject>();
 
 
-            // Add HighlightController.cs to Body
-            if (body.GetComponent<HighlightController>() == null)
-            {
-                body.AddComponent<HighlightController>();
-            }
+            AudioSource aS = item.GetComponent<AudioSource>();
+            StealInteraction si = item.GetComponent<StealInteraction>();
 
-            // Set original item as a child of "Body"
-            item.SetParent(body.transform);
-
-            // Add Outline.cs to the original item
-            if (item.gameObject.GetComponent<Outline>() == null)
-            {
-                item.gameObject.AddComponent<Outline>();
-            }
-
-            // Create "Interactive Object" as a child of "Body"
-            GameObject interactiveObject = new GameObject("Interactive Object");
-            interactiveObject.transform.SetParent(body.transform);
-
-            // Add InteractiveObject.cs to "Interactive Object"
-            if (interactiveObject.GetComponent<InteractiveObject>() == null)
-            {
-                interactiveObject.AddComponent<InteractiveObject>();
-            }
-
-            // Add RaycastTarget.cs to "Interactive Object"
-            if (interactiveObject.GetComponent<RaycastTarget>() == null)
-            {
-                RaycastTarget t = interactiveObject.AddComponent<RaycastTarget>();
-                t.OnRayEnter += () => { body.GetComponent<HighlightController>().IsHighlighted = true; };
-                t.OnRayExit += () => { body.GetComponent<HighlightController>().IsHighlighted = false; };
-            }
-
-            // Create "StealInteraction" as a child of "Interactive Object"
-            GameObject stealInteraction = new GameObject("StealInteraction");
-            stealInteraction.transform.SetParent(interactiveObject.transform);
-
-            // Add StealInteraction.cs to "StealInteraction"
-            if (stealInteraction.GetComponent<StealInteraction>() == null)
-            {
-                stealInteraction.AddComponent<StealInteraction>();
-            }
-
-            // Add Hint.cs to "StealInteraction"
-            if (stealInteraction.GetComponent<Hint>() == null)
-            {
-                stealInteraction.AddComponent<Hint>();
-            }
-
-            // Register undo for each new object
-            Undo.RegisterCreatedObjectUndo(table, "Create Table Structure");
-
-            Debug.Log($"Processed: {item.gameObject.name}");
+            UnityEventTools.AddPersistentListener(si.OnInteract,aS.Play);
+            io.interactions = new Interaction[] { si };
         }
 
         EditorSceneManager.SaveOpenScenes();

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blood
       objectReference: {fileID: 0}
+    - target: {fileID: 3715982190183721338, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      propertyPath: message
+      value: Zabij
+      objectReference: {fileID: 0}
     - target: {fileID: 3780270955164652384, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: ShapeModule.type
       value: 4
@@ -76,6 +80,10 @@ PrefabInstance:
       propertyPath: message
       value: Dotknij
       objectReference: {fileID: 0}
+    - target: {fileID: 5633353908285835585, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
+      propertyPath: deathSequence
+      value: 
+      objectReference: {fileID: 2087806491847785748}
     - target: {fileID: 5633353908285835585, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: squeezeDeathSequence
       value: 

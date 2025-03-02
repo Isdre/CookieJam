@@ -27,5 +27,10 @@ namespace Bipolar.RaycastSystem
             onRayExit.Invoke();
             OnRayExit?.Invoke();
         }
+
+        private void OnDisable()
+        {
+            RayExit();
+        }
     }
 }

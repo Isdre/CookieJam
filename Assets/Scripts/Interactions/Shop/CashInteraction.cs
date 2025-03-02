@@ -10,6 +10,7 @@ namespace Shop {
         public UnityEvent OnInteract;
 
         public override void Interact(Interactor interactor){
+            if (!DontStealStoryDirector.Instance.stealAnyItem) return;
             OnInteract.Invoke();
         }
     }
