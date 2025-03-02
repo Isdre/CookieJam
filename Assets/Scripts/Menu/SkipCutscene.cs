@@ -14,6 +14,11 @@ public class SkipCutscene : MonoBehaviour
     private bool _changeScene;
     private Coroutine _coroutine;
 
+    public void Start() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if(_changeScene) {

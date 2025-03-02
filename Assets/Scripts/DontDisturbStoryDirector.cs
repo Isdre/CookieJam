@@ -112,11 +112,11 @@ public class DontDisturbStoryDirector : MonoBehaviour
         
         foreach (var t in kids) 
             t.OnInteract.RemoveListener(LostOnDestroy);
-        LevelsManager.Instance.NextLevelVariant();
+        LevelsManager.Instance.NextLevel();
     }
 
     private void Lose()
     {
-        LevelsManager.Instance.NextLevelVariant();
+        LevelsManager.Instance.ResetLevel();
     }
 }
