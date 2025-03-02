@@ -13,6 +13,8 @@ public class FadePanel : MonoBehaviour
     [SerializeField]
     private float fadeOutDuration;
 
+    private Tweener tweeningProcess; 
+
     private void OnEnable()
     {
         LevelsManager.OnLevelUnloading += FadeIn;
@@ -24,11 +26,13 @@ public class FadePanel : MonoBehaviour
     private void FadeIn()
     {
         image.enabled = true;
-        image.DOFade(1, fadeInDuration);
+        tweeningProcess = image.DOFade(1, fadeInDuration).OnComplete(() => tweeningProcess = null);
     }
 
     private void ForceFaded()
     {
+        tweeningProcess?.Kill();
+
         image.enabled = true;
         var color = image.color;
         color.a = 1;
@@ -36,8 +40,12 @@ public class FadePanel : MonoBehaviour
     }
     private void FadeOut()
     {
-        image.DOFade(0, fadeOutDuration)
-            .OnComplete(() => image.enabled = false);
+        tweeningProcess = image.DOFade(0, fadeOutDuration)
+            .OnComplete(() =>
+            {
+                image.enabled = false;
+                tweeningProcess = null;
+            });
     }
 
     private void OnDisable()

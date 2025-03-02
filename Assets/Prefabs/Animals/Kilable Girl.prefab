@@ -109,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3715982190183721338, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: message
-      value: "Z\u0142y dotyk boli ca\u0142e \u017Cycie"
+      value: " Zrzu\u0107 ze zje\u017Cd\u017Calni"
       objectReference: {fileID: 0}
     - target: {fileID: 3780270955164652384, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}
       propertyPath: ShapeModule.type
@@ -380,7 +380,7 @@ MonoBehaviour:
   trigger:
     serializedObject: {fileID: 11400000, guid: 30fdfbe3da982994cb27535f397638b3, type: 2}
   deathSequence: {fileID: 7949528860998196634}
-  raycastTargetToDisable: {fileID: 0}
+  raycastTargetToDisable: {fileID: 3386824459980066631}
 --- !u!4 &8608734185615258922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8379912738771122326, guid: 052f5b9e3898fb34a9e3690159fab484, type: 3}

@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 6038473597564085476}
-  moveSpeed: 4
+  moveSpeed: 2.5
   cameraSensitivity: {x: 1.8, y: 1.8}
   groundLayers:
     serializedVersion: 2

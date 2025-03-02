@@ -51,6 +51,7 @@ namespace LevelManagement
             }
             ChangeLevel(Levels[currentLevelId].NextLevelVariantId);
         }
+
         public void ChangeLevel(string id)
         {
             StartCoroutine(ChangingLevelCo(id));
@@ -60,13 +61,11 @@ namespace LevelManagement
         {
             if (currentLevelId != -1) {
                 OnLevelUnloading?.Invoke();
-                yield return new WaitForSeconds(destroingLevelDuration / 3f);
                 player.enabled = false;
-                yield return new WaitForSeconds(destroingLevelDuration / 3f);
+                yield return new WaitForSeconds(destroingLevelDuration);
                 Destroy(currentLevel.gameObject);
                 currentLevel = null;
                 currentLevelId = -1;
-                yield return new WaitForSeconds(destroingLevelDuration / 3f);
                 OnLevelUnloaded?.Invoke();
             }
 
