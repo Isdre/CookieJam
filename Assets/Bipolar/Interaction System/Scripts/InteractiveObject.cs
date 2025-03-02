@@ -6,8 +6,7 @@ namespace Bipolar.InteractionSystem
     [DisallowMultipleComponent]
     public class InteractiveObject : MonoBehaviour
     {
-        [SerializeField]
-        private Interaction[] interactions;
+        public Interaction[] interactions;
         public IReadOnlyList<Interaction> Interactions => interactions;
 
         public bool TryInteract(Interactor interactor, out Interaction interactedInteraction)
