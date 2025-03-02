@@ -4,11 +4,12 @@ using UnityEngine;
 using DG.Tweening;
 using Bipolar.InteractionSystem;
 using LevelManagement;
+using UnityEngine.Events;
 
 namespace Forest {
     public class MushroomBasket : MonoBehaviour {
         public static MushroomBasket instance;
-
+        public UnityEvent OnCollectingAllMushroom;
         public int mushroomCount;
 
         private void Awake() {
@@ -24,7 +25,7 @@ namespace Forest {
         public void AddMushroom() {
             mushroomCount++;
             if (mushroomCount == 4) {
-                LevelsManager.Instance.NextLevelVariant();
+                OnCollectingAllMushroom.Invoke();
             }
         }
     }

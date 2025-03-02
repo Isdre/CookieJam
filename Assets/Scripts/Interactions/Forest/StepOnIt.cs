@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Bipolar.InteractionSystem;
+using UnityEngine.Events;
 
 namespace Forest {
-public class StepOnIt : MonoBehaviour
-    {
+    public class StepOnIt : MonoBehaviour {
+        public UnityEvent OnInteract;
+        
         [SerializeField]
         private Transform body;
 
@@ -19,6 +21,7 @@ public class StepOnIt : MonoBehaviour
         public void Interact()
         {
             body.DOScaleY(targetY, stepTime);
+            OnInteract.Invoke();
         }
     }
 }

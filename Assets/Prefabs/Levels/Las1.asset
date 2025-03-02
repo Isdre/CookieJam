@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Las1
   m_EditorClassIdentifier: 
   LevelId: Las1
-  NextLevelVariantId: Las2
-  NextLevelId: Las2
+  NextLevelVariantId: Las1
+  NextLevelId: Las1
   LevelPrefab: {fileID: 8047477592286448016, guid: 810d486eae5a37fdbac6afb84295c7fe, type: 3}
