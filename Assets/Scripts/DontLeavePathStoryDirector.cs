@@ -167,6 +167,6 @@ public class DontLeavePathStoryDirector : MonoBehaviour
     private void Lose()
     {
         NarratorController.Instance.Stop();
-        LevelsManager.Instance.ResetLevel();
+        LevelsManager.Instance.NextLevelVariant();
     }
 }

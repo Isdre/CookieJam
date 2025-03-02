@@ -113,11 +113,13 @@ public class DontStealStoryDirector : MonoBehaviour
 
     private void Win()
     {
+        NarratorController.Instance.Stop();
         LevelsManager.Instance.NextLevel();
     }
 
     private void Lose()
     {
-        LevelsManager.Instance.ResetLevel();
+        NarratorController.Instance.Stop();
+        LevelsManager.Instance.NextLevelVariant();
     }
 }

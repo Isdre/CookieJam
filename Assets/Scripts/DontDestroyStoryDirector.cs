@@ -119,6 +119,6 @@ public class DontDestroyStoryDirector : MonoBehaviour
     private void Lose()
     {
         NarratorController.Instance.Stop();
-        LevelsManager.Instance.ResetLevel();
+        LevelsManager.Instance.NextLevelVariant();
     }
 }

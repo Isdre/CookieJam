@@ -97,7 +97,7 @@ namespace LevelManagement
                 return;
             }
             triesCount++;
-            if (triesCount == 3) {
+            if (triesCount == 1) {
                 NextLevel();
             }
             else ChangeLevel(Levels[currentLevelId].LevelId);
