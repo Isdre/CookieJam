@@ -5,8 +5,7 @@ namespace Bipolar.RaycastSystem
     [RequireComponent(typeof(Collider)), DisallowMultipleComponent]
     public class RaycastCollider : MonoBehaviour
     {
-        [SerializeField]
-        private RaycastTarget[] raycastTargets;
+        public RaycastTarget[] raycastTargets;
         public RaycastTarget RaycastTarget
         {
             get

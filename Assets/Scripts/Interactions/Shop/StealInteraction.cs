@@ -12,7 +12,7 @@ namespace Shop {
         //private Transform body;
 
         public override void Interact(Interactor interactor){
-            //Destroy(body.gameObject);
+            Destroy(gameObject);
             OnInteract.Invoke();
         }
     }
