@@ -15,9 +15,8 @@ namespace LevelManagement
         public int triesCount;
 
         [SerializeField]
-        private GameObject currentLevel;
+        private Level currentLevel;
         private int currentLevelId = -1;
-
 
         private void Awake() {
             if (Instance == null) {
@@ -54,13 +53,15 @@ namespace LevelManagement
 
             foreach (LevelSO level in Levels) {
                 if (level.LevelId == id) {
-                    currentLevel = Instantiate(level.LevelPrefab) as GameObject;
+                    currentLevel = Instantiate(level.LevelPrefab);
                     currentLevelId = Levels.IndexOf(level);
-                    player.position = currentLevel.GetComponent<Level>().StartPosition.position;
+                    player.position = currentLevel.StartPosition.position;
                     Debug.Log(player.position);
                     Physics.SyncTransforms();
-                    player.rotation = currentLevel.GetComponent<Level>().StartPosition.rotation;
-                    player.GetComponent<PlayerMovement>().enabled = false;
+                    player.rotation = Quaternion.AngleAxis(currentLevel.StartPosition.eulerAngles.y, Vector3.up);
+                    var playerMovement = player.GetComponent<PlayerMovement>();
+                    playerMovement.ResetHead();
+                    playerMovement.enabled = false;
                     break;
                 }
             }

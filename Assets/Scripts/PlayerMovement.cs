@@ -32,6 +32,12 @@ public class PlayerMovement : MonoBehaviour
         MovePlayer();
     }
 
+    public void ResetHead()
+    {
+        headPitch = 0;
+        head.localRotation = Quaternion.identity;
+    }
+
     private void HandleRotation()
     {
         float mouseX = Input.GetAxis("Mouse X");
