@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GirlRigidbodyFallDetector : MonoBehaviour
 {
@@ -15,11 +16,14 @@ public class GirlRigidbodyFallDetector : MonoBehaviour
     [SerializeField]
     private Transform[] bloodObjects;
 
+    public UnityEvent OnFall;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             var rb = GetComponent<Rigidbody>();
+            
+            OnFall.Invoke();
 
             var scalingTransform = new GameObject("Scaling Point").transform;
             var collisionPoint = collision.contacts[0].point;
@@ -45,6 +49,7 @@ public class GirlRigidbodyFallDetector : MonoBehaviour
                     squeezeDeathSequence.SqueezedBody = scalingTransform;
                     squeezeDeathSequence.Play();
                 });
+            
         }
     }
 
