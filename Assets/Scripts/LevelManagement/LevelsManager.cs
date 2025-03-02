@@ -7,6 +7,11 @@ namespace LevelManagement
 {
     public class LevelsManager : MonoBehaviour
     {
+        public static event System.Action OnLevelUnloading;
+        public static event System.Action OnLevelUnloaded;
+        public static event System.Action OnLevelLoading;
+        public static event System.Action OnLevelLoaded;
+
         public static LevelsManager Instance;
         [SerializeField] private Transform player;
 
@@ -17,6 +22,11 @@ namespace LevelManagement
         [SerializeField]
         private Level currentLevel;
         private int currentLevelId = -1;
+
+        [SerializeField]
+        private float destroingLevelDuration;
+        [SerializeField]
+        private float loadingLevelDuration;
 
         private void Awake() {
             if (Instance == null) {
@@ -41,18 +51,28 @@ namespace LevelManagement
             }
             ChangeLevel(Levels[currentLevelId].NextLevelVariantId);
         }
+        public void ChangeLevel(string id)
+        {
+            StartCoroutine(ChangingLevelCo(id));
+        }
 
-        public void ChangeLevel(string id) {
+        private IEnumerator ChangingLevelCo(string id)
+        {
             if (currentLevelId != -1) {
+                OnLevelUnloading?.Invoke();
+                yield return new WaitForSeconds(destroingLevelDuration);
                 Destroy(currentLevel.gameObject);
                 currentLevel = null;
                 currentLevelId = -1;
+                OnLevelUnloaded?.Invoke();
             }
-            
-            
 
-            foreach (LevelSO level in Levels) {
-                if (level.LevelId == id) {
+            foreach (LevelSO level in Levels)
+            {
+                if (level.LevelId == id)
+                {
+                    OnLevelLoading?.Invoke();
+                    yield return new WaitForSeconds(loadingLevelDuration * 0.5f);
                     currentLevel = Instantiate(level.LevelPrefab);
                     currentLevelId = Levels.IndexOf(level);
                     player.position = currentLevel.StartPosition.position;
@@ -62,6 +82,8 @@ namespace LevelManagement
                     var playerMovement = player.GetComponent<PlayerMovement>();
                     playerMovement.ResetHead();
                     playerMovement.enabled = false;
+                    yield return new WaitForSeconds(loadingLevelDuration * 0.5f);
+                    OnLevelLoaded?.Invoke();
                     break;
                 }
             }

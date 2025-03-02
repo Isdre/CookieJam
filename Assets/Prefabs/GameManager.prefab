@@ -68,3 +68,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bf533ed45efa5564bb08ebd6b3d7e8d4, type: 2}
   triesCount: 0
   currentLevel: {fileID: 0}
+  destroingLevelDuration: 2
+  loadingLevelDuration: 2

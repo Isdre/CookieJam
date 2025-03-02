@@ -1648,7 +1648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c13fecd4a6a1d4e9beb4fe03a2d855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialNarratorSequenceDelay: 0.5
+  initialNarratorSequenceDelay: 2
   initialNarratorSequence: {fileID: 0}
   enablePlayerMovementDelay: 1
   initializationEvents: []

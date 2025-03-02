@@ -47,10 +47,10 @@ public class DontKillStoryDirector : MonoBehaviour
         player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         KillInteraction.OnAnimalKilling += KillInteraction_OnAnimalKilling;
 
+        yield return new WaitForSeconds(initialNarratorSequenceDelay);
         foreach (var delayedEvent in initializationEvents)
             delayedEvent.CallDelayed();
 
-        yield return new WaitForSeconds(initialNarratorSequenceDelay);
         NarratorController.OnSequenceEnded += StartWaitingForWinningSequence;
         NarratorController.Instance.Say(initialNarratorSequence);
         yield return new WaitForSeconds(enablePlayerMovementDelay);
