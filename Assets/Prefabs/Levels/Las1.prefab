@@ -48,6 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3e8cff69e6ee78ebd0c387313b62b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCollectingAllMushroom:
+    m_PersistentCalls:
+      m_Calls: []
   mushroomCount: 0
 --- !u!1 &4441131870335363644
 GameObject:
@@ -466,6 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5024285477153523901}
   - component: {fileID: 1711610029041417697}
+  - component: {fileID: 4656203565674320582}
   m_Layer: 0
   m_Name: Las1
   m_TagString: Untagged
@@ -510,6 +514,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPosition: {fileID: 2371628838278847774}
+--- !u!114 &4656203565674320582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8047477592286448016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854cb7a5d2d3413d99ad53fd3cf07294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialNarratorSequenceDelay: 0.5
+  initialNarratorSequence: {fileID: 11400000, guid: 8869f54f6d86ddd4db9b056f628513b0, type: 2}
+  enablePlayerMovementDelay: 1
+  destroyerNarratorCommentSequence: {fileID: 11400000, guid: bbab1fb0127e28c41a1cd8675a1d9f46, type: 2}
+  goodBoyNarratorCommentSequence: {fileID: 11400000, guid: c18947c1509115f46957ef6c04878eb5, type: 2}
 --- !u!1 &8574345816823096090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1769,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5024285477153523901}
     m_Modifications:
+    - target: {fileID: 681492378996403064, guid: b956f2d50a65b855fb56f75c5921cbfc, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 681492378996403064, guid: b956f2d50a65b855fb56f75c5921cbfc, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7001723042312035012, guid: b956f2d50a65b855fb56f75c5921cbfc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 165.2

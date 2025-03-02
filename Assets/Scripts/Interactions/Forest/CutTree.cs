@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Bipolar.InteractionSystem;
+using UnityEngine.Events;
 
 namespace Forest {
-public class CutTree  : Interaction
+    public class CutTree  : Interaction
     {
+    public UnityEvent OnInteract;
         [SerializeField]
         private Transform tree;
 
@@ -20,6 +22,7 @@ public class CutTree  : Interaction
             isCut = true;
             Debug.Log("Cutting tree");
             tree.DORotateQuaternion(Quaternion.AngleAxis(90,interactor.transform.right),fallingTime);
+            OnInteract.Invoke();
         }
     }
 }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Bipolar.InteractionSystem;
+using UnityEngine.Events;
 
 namespace Forest {
     public class ScreamOnIt : Interaction
     {
+        public UnityEvent OnInteract;
         [SerializeField]
         private AudioSource _audio; 
         [SerializeField]
@@ -20,6 +22,7 @@ namespace Forest {
             _audio.Play();
             body.DOMoveY(0.3f,fallingTime);
             body.DORotate(new Vector3(0,0,90f),fallingTime);
+            OnInteract.Invoke();
         }
     }
 }
