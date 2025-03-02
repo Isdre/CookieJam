@@ -315,7 +315,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21e745dd2d990af4896ac21290a60caf, type: 3}
       insertIndex: -1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       addedObject: {fileID: 5793412240611906594}
+=======
+      addedObject: {fileID: 6461999909404782106}
+>>>>>>> Stashed changes
 =======
       addedObject: {fileID: 6461999909404782106}
 >>>>>>> Stashed changes
@@ -331,7 +335,11 @@ GameObject:
   m_PrefabInstance: {fileID: 1418050140136825810}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!65 &5793412240611906594
+=======
+--- !u!65 &6461999909404782106
+>>>>>>> Stashed changes
 =======
 --- !u!65 &6461999909404782106
 >>>>>>> Stashed changes
@@ -354,8 +362,13 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Size: {x: 0.05600002, y: 0.12800005, z: 0.0090086665}
   m_Center: {x: 0.028000014, y: -0.064000025, z: 0.004504312}
+=======
+  m_Size: {x: 0.05600002, y: 0.12800005, z: 0.00877561}
+  m_Center: {x: 0.028000014, y: -0.064000025, z: 0.004387775}
+>>>>>>> Stashed changes
 =======
   m_Size: {x: 0.05600002, y: 0.12800005, z: 0.00877561}
   m_Center: {x: 0.028000014, y: -0.064000025, z: 0.004387775}
@@ -475,9 +488,15 @@ PrefabInstance:
       value: SM_Kasjer
       objectReference: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - target: {fileID: 6150248126327621079, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.186
+=======
+    - target: {fileID: 2035205389541847083, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
+      propertyPath: m_Layer
+      value: 10
+>>>>>>> Stashed changes
 =======
     - target: {fileID: 2035205389541847083, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
       propertyPath: m_Layer
@@ -490,6 +509,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2035205389541847083, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
       insertIndex: -1
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       addedObject: {fileID: 9176341348259112518}
     - targetCorrespondingSourceObject: {fileID: 2035205389541847083, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
@@ -511,6 +531,8 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8155939468877678334}
 =======
+=======
+>>>>>>> Stashed changes
       addedObject: {fileID: 6947760809507250279}
     - targetCorrespondingSourceObject: {fileID: 2035205389541847083, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
       insertIndex: -1
@@ -533,6 +555,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2035205389541847083, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2594862557694025770}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
 --- !u!1 &8013651031516007172 stripped
@@ -541,8 +566,11 @@ GameObject:
   m_PrefabInstance: {fileID: 8289074828006030127}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &9176341348259112518
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!136 &6947760809507250279
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -679,6 +707,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &5236924647195958582
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,7 +723,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   outlineMode: 0
+=======
+  outlineMode: 1
+>>>>>>> Stashed changes
 =======
   outlineMode: 1
 >>>>>>> Stashed changes
@@ -702,7 +737,11 @@ MonoBehaviour:
   bakeKeys: []
   bakeValues: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!82 &3472400818524822345
+=======
+--- !u!82 &2594862557694025770
+>>>>>>> Stashed changes
 =======
 --- !u!82 &2594862557694025770
 >>>>>>> Stashed changes
@@ -717,7 +756,11 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8b32b783208aa1040bb6148de5bf1eec, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_PlayOnAwake: 0
+=======
+  m_PlayOnAwake: 1
+>>>>>>> Stashed changes
 =======
   m_PlayOnAwake: 1
 >>>>>>> Stashed changes
@@ -805,6 +848,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!135 &7230803870186422416
 SphereCollider:
@@ -925,6 +969,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHighlighted: 0
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!4 &8395286803016522948 stripped

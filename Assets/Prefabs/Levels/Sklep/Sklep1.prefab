@@ -1617,8 +1617,11 @@ Transform:
   - {fileID: 9089008741700878764}
   - {fileID: 6200297987275827156}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 4437996778787155513}
   - {fileID: 1911927996353220831}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   - {fileID: 4443390943937941585}
@@ -23138,7 +23141,11 @@ PrefabInstance:
     - target: {fileID: 2149950051425425143, guid: 48d6a9bbee167314e9b712b82e9967b4, type: 3}
       propertyPath: m_Enabled
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 1
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes

@@ -51,6 +51,7 @@ public class CreateItemsToSteal : MonoBehaviour
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             // Add HighlightController.cs to Body
             if (body.GetComponent<HighlightController>() == null)
             {
@@ -65,6 +66,10 @@ public class CreateItemsToSteal : MonoBehaviour
             {
                 item.gameObject.AddComponent<Outline>();
             }
+=======
+            rt.OnRayEnter += () => { hc.IsHighlighted = true; };
+            rt.OnRayExit += () => { hc.IsHighlighted = false; };
+>>>>>>> Stashed changes
 =======
             rt.OnRayEnter += () => { hc.IsHighlighted = true; };
             rt.OnRayExit += () => { hc.IsHighlighted = false; };
