@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Forest;
 using UnityEngine;
 
-public class DontDestroyStoryDirector : MonoBehaviour
+public class DontDisturbStoryDirector : MonoBehaviour
 {
     [Header("Initialization")]
     [SerializeField]
@@ -19,7 +19,7 @@ public class DontDestroyStoryDirector : MonoBehaviour
     [SerializeField]
     private NarratorCommentSequence destroyerNarratorCommentSequence;
 
-    [Header("Good boy")]
+    [Header("Good boy")] 
     [SerializeField]
     private NarratorCommentSequence goodBoyNarratorCommentSequence;
 

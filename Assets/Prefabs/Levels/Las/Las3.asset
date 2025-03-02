@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e604cdf6b410ed072bbaff30862e2c6c, type: 3}
-  m_Name: Las2
+  m_Name: Las3
   m_EditorClassIdentifier: 
-  LevelId: Las2
+  LevelId: Las3
   NextLevelVariantId: Las1
   NextLevelId: Las1
-  LevelPrefab: {fileID: 6918206916837331268, guid: c246420ae2dda8549a5d4e13debc32a5, type: 3}
+  LevelPrefab: {fileID: 7368088049569040035, guid: 8c6e11daa595792489080b6717b0823d, type: 3}
