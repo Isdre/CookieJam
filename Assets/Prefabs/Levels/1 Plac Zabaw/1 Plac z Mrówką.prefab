@@ -67,10 +67,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
-      propertyPath: waitingDuration
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: killNarratorSequence
       value: 
       objectReference: {fileID: 11400000, guid: a62f002c4d21a364094a51358138a565, type: 2}
@@ -84,7 +80,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 019812bd4a7e67445a7bf4a4571b0246, type: 2}
     - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: enablePlayerMovementDelay
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: initializationEvents.Array.size
@@ -96,15 +92,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: initializationEvents.Array.data[1].delay
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: initializationEvents.Array.data[2].delay
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: initializationEvents.Array.data[3].delay
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: initializationEvents.Array.data[0].action.m_PersistentCalls.m_Calls.Array.size

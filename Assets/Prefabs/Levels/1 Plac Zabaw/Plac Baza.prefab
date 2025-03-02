@@ -1648,12 +1648,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c13fecd4a6a1d4e9beb4fe03a2d855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialNarratorSequenceDelay: 2
+  initialNarratorSequenceDelay: 1.5
   initialNarratorSequence: {fileID: 0}
   enablePlayerMovementDelay: 1
   initializationEvents: []
   killNarratorSequence: {fileID: 0}
-  waitingDuration: 10
+  waitingDuration: 15
   afterWaitNarratorSequence: {fileID: 0}
 --- !u!1 &2757456051369127975
 GameObject:
