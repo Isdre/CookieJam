@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 936702461658633050}
   - component: {fileID: 7815767342484987471}
   - component: {fileID: 5869284110531258333}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.5019608, b: 0, a: 1}
-  outlineWidth: 10
+  outlineWidth: 40
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
