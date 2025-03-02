@@ -356,7 +356,15 @@ MonoBehaviour:
   videoGoodPlayer: {fileID: 229896172}
   videoBadPlayer: {fileID: 873925384}
   levels:
-  - daasda
+  - Plac1
+  - Plac2
+  - Plac3
+  - Las1
+  - Las2
+  - Las3
+  - Sklep1
+  - Sklep2
+  - Sklep3
 --- !u!4 &1102801324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 415265133832698796, guid: 9472883b46c45fe5babfb37c37837d31, type: 3}
