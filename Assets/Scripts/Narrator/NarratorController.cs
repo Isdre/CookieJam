@@ -19,6 +19,7 @@ namespace Narrator
 
         public void Say(NarratorCommentSequence commentSequence)
         {
+            Debug.LogError($"Saying {commentSequence.name} sequence");
             if (currentSequence != null)
                 Stop();
 

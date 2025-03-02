@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
+    private void OnEnable()
+    {
+        characterController.enabled = true;
+    }
+
     private void Start()
     {
         headPitch = head.localEulerAngles.x;
@@ -59,5 +64,9 @@ public class PlayerMovement : MonoBehaviour
         direction.y = 0;
 
         characterController.SimpleMove(moveSpeed * direction);
+    }
+    private void OnDisable()
+    {
+        characterController.enabled = false;
     }
 }
