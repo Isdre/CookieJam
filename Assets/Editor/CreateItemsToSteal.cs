@@ -40,11 +40,6 @@ public class CreateItemsToSteal : MonoBehaviour
             InteractiveObject io = item.GetComponent<InteractiveObject>();
 
 
-            AddPersistentListener(rt.onRayEnter, () => { hc.IsHighlighted = true; });
-            AddPersistentListener(rt.onRayExit, () => { hc.IsHighlighted = false; });
-
-
-
             AudioSource aS = item.GetComponent<AudioSource>();
             StealInteraction si = item.GetComponent<StealInteraction>();
 
