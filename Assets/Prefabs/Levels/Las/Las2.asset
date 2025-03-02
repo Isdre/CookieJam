@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelId: Las2
   NextLevelVariantId: Las3
-  NextLevelId: Las3
-  LevelPrefab: {fileID: 6918206916837331268, guid: c246420ae2dda8549a5d4e13debc32a5, type: 3}
+  NextLevelId: Sklep1
+  LevelPrefab: {fileID: 1760017890433131829, guid: c246420ae2dda8549a5d4e13debc32a5, type: 3}

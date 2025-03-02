@@ -51,6 +51,7 @@ namespace LevelManagement
             }
             ChangeLevel(Levels[currentLevelId].NextLevelVariantId);
         }
+
         public void ChangeLevel(string id)
         {
             StartCoroutine(ChangingLevelCo(id));
