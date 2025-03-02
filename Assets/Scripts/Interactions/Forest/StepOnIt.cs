@@ -6,7 +6,7 @@ using Bipolar.InteractionSystem;
 using UnityEngine.Events;
 
 namespace Forest {
-    public class StepOnIt : MonoBehaviour {
+    public class StepOnIt : Interaction {
         public UnityEvent OnInteract;
         
         [SerializeField]
@@ -18,7 +18,7 @@ namespace Forest {
         [SerializeField]
         private float stepTime = 0.25f;
 
-        public void Interact()
+        public override void Interact(Interactor interactor)
         {
             body.DOScaleY(targetY, stepTime);
             OnInteract.Invoke();
