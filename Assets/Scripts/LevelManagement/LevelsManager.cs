@@ -44,7 +44,7 @@ namespace LevelManagement
 
         public void ChangeLevel(string id) {
             if (currentLevelId != -1) {
-                Destroy(currentLevel);
+                Destroy(currentLevel.gameObject);
                 currentLevel = null;
                 currentLevelId = -1;
             }
