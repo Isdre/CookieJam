@@ -76,7 +76,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: waitingDuration
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8065996230502386357, guid: f5077e089b86e884aa05027e187e3322, type: 3}
       propertyPath: killNarratorSequence

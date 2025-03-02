@@ -2,6 +2,7 @@ using Narrator;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace LevelManagement
 {
@@ -67,6 +68,12 @@ namespace LevelManagement
                 currentLevel = null;
                 currentLevelId = -1;
                 OnLevelUnloaded?.Invoke();
+            }
+
+            if (id == "End")
+            {
+                SceneManager.LoadScene(3);
+                yield break;
             }
 
             foreach (LevelSO level in Levels)

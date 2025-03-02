@@ -25,7 +25,7 @@ namespace Bipolar.InteractionSystem
             get => currentInteractiveObject;
             set
             {
-                if (currentInteractiveObject == value)
+                if (ReferenceEquals(currentInteractiveObject, value))
                     return;
 
                 var oldInteractiveObject = currentInteractiveObject;
@@ -36,7 +36,9 @@ namespace Bipolar.InteractionSystem
 
         public void CheckInteractions()
         {
-            if (CurrentInteractiveObject && CurrentInteractiveObject.isActiveAndEnabled)
+            if (CurrentInteractiveObject == null)
+                CurrentInteractiveObject = null;
+            else if (CurrentInteractiveObject.isActiveAndEnabled)
                 if (CurrentInteractiveObject.TryInteract(this, out var interaction))
                     OnInteracted?.Invoke(CurrentInteractiveObject, interaction);
         }
