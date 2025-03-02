@@ -27,18 +27,27 @@ public class DontStealStoryDirector : MonoBehaviour
     private PlayerMovement player;
 
     private StealInteraction[] itemsToSteal;
+    private ExitInteraction[] exitDoors;
+    private CashInteraction[] cashiers;
 
-    private bool haveAnyItem = false;
+    private bool stealAnyItem = false;
     
     private IEnumerator Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
         
         itemsToSteal = GetComponentsInChildren<StealInteraction>();
-
-        foreach (var item in itemsToSteal) {
+        exitDoors = GetComponentsInChildren<ExitInteraction>();
+        cashiers = GetComponentsInChildren<CashInteraction>();
+        
+        foreach (var item in itemsToSteal)
             item.OnInteract.AddListener(TakeItem);
-        }
+        
+        foreach (var door in exitDoors)
+            door.OnInteract.AddListener(Leave);
+        
+        foreach (var c in cashiers)
+            c.OnInteract.AddListener(Pay);
         
         yield return new WaitForSeconds(initialNarratorSequenceDelay);
         initialNarratorSequence.Say();
@@ -46,12 +55,28 @@ public class DontStealStoryDirector : MonoBehaviour
         player.enabled = true;
     }
 
+    public void Leave() {
+        if (stealAnyItem) LostOnSteal();
+        else StartSayingWinningCommentSequence();
+    }
+    
     public void TakeItem() {
-        haveAnyItem = true;
+        stealAnyItem = true;
+    }
+
+    public void Pay() {
+        stealAnyItem = false;
     }
     
     public void LostOnSteal() {
+        foreach (var item in itemsToSteal)
+            item.OnInteract.RemoveListener(TakeItem);
         
+        foreach (var door in exitDoors)
+            door.OnInteract.RemoveListener(Leave);
+        
+        foreach (var c in cashiers)
+            c.OnInteract.RemoveListener(Pay);
         player.enabled = false;
         NarratorController.Instance.Stop();
         NarratorController.OnSequenceEnded -= WinAfterTalking;
@@ -74,6 +99,14 @@ public class DontStealStoryDirector : MonoBehaviour
 
     private void WinAfterTalking(NarratorCommentSequence sequence)
     {
+        foreach (var item in itemsToSteal)
+            item.OnInteract.RemoveListener(TakeItem);
+        
+        foreach (var door in exitDoors)
+            door.OnInteract.RemoveListener(Leave);
+        
+        foreach (var c in cashiers)
+            c.OnInteract.RemoveListener(Pay);
         NarratorController.OnSequenceEnded -= WinAfterTalking;
         Win();
     }
