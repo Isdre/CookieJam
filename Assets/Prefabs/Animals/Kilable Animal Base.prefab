@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959136288352028327}
   - component: {fileID: 4866752192594177275}
+  - component: {fileID: 9125289376636431014}
   m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
@@ -45,6 +46,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHighlighted: 0
+--- !u!135 &9125289376636431014
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320727887409985687}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2296313470977385553
 GameObject:
   m_ObjectHideFlags: 0
@@ -5040,7 +5062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger:
     serializedObject: {fileID: 11400000, guid: 30fdfbe3da982994cb27535f397638b3, type: 2}
-  squeezeDeathSequence: {fileID: 0}
+  deathSequence: {fileID: 0}
   raycastTargetToDisable: {fileID: 3184989396467548923}
 --- !u!114 &3715982190183721338
 MonoBehaviour:
@@ -5054,7 +5076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1514fe736ac93c4b858d0d5803d4783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "Dotknij s\u0142odkiej mr\xF3weczki"
+  message: 'Dotknij '
 --- !u!1001 &4430138194333285216
 PrefabInstance:
   m_ObjectHideFlags: 0

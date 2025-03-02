@@ -1,3 +1,4 @@
+using Narrator;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -55,12 +56,14 @@ namespace LevelManagement
                     Debug.Log(player.position);
                     Physics.SyncTransforms();
                     player.rotation = currentLevel.GetComponent<Level>().StartPosition.rotation;
+                    player.GetComponent<PlayerMovement>().enabled = false;
                     break;
                 }
             }
         }
 
         public void ResetLevel() {
+            NarratorController.ClearEvents();  
             if (currentLevelId != -1) {
                 ChangeLevel(Levels[currentLevelId].LevelId);
             }

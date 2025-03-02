@@ -1,15 +1,15 @@
 using Bipolar.InteractionSystem;
 using Bipolar.RaycastSystem;
-using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class KillInteraction : Interaction
 {
     public static event System.Action OnAnimalKilling;
     public static event System.Action OnAnimalKilled;
 
-    [SerializeField]
-    private SqueezeDeathSequence squeezeDeathSequence;
+    [SerializeField, FormerlySerializedAs("squeezeDeathSequence")]
+    private DeathSequence deathSequence;
 
     [SerializeField]
     private RaycastTarget raycastTargetToDisable;
@@ -20,13 +20,13 @@ public class KillInteraction : Interaction
         if (raycastTargetToDisable)
             raycastTargetToDisable.enabled = false;
 
-        squeezeDeathSequence.OnSequenceFinished += SqueezeDeathSequence_OnSequenceFinished;
-        squeezeDeathSequence.Squeeze();
+        deathSequence.OnSequenceFinished += DeathSequence_OnSequenceFinished;
+        deathSequence.Play();
     }
 
-    private void SqueezeDeathSequence_OnSequenceFinished()
+    private void DeathSequence_OnSequenceFinished()
     {
-        squeezeDeathSequence.OnSequenceFinished -= SqueezeDeathSequence_OnSequenceFinished;
+        deathSequence.OnSequenceFinished -= DeathSequence_OnSequenceFinished;
         OnAnimalKilled?.Invoke();
     }
 }

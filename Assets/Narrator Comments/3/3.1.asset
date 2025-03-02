@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 3.1
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: 4092a96038ad9b04391acc28ab04912e, type: 3}
+    delayAfter: 1
+    message: "Etap ko\u0144cowy."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 575e0ee842dd2534da2e7f31c5fb11d6, type: 3}
+    delayAfter: 1
+    message: 'Obiekt testowy: jednostka ludzkiego gatunku w fazie wczesnego rozwoju.'
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: b5a208e372677274eade2ed9754e8e6e, type: 3}
+    delayAfter: 0.6
+    message: "Ludzkie struktury spo\u0142eczne funkcjonuj\u0105 na bazie niewidzialnych
+      wi\u0119zi, okre\u015Blanych jako empatia, odpowiedzialno\u015B\u0107, moralno\u015B\u0107."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: 87c70f09fcab959418e3758250d3b622, type: 3}
+    delayAfter: 0.7
+    message: "Twoja reakcja na obecno\u015B\u0107 obiektu testowego okre\u015Bli
+      zdolno\u015B\u0107 do asymilacji w nowym systemie."
+    delayPerLetter: 0.05

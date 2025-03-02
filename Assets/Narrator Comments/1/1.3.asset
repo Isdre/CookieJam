@@ -14,27 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comments:
   - audio: {fileID: 8300000, guid: e355b6cd50cad4a4cb20d1140fa51a6a, type: 3}
-    delayAfter: 1
+    delayAfter: 0.2
     message: "Akcja zosta\u0142a zarejestrowana."
     delayPerLetter: 0.05
   - audio: {fileID: 8300000, guid: ccbc5d9fae7504b4892179ec18d93e1d, type: 3}
-    delayAfter: 1
+    delayAfter: 0.3
     message: "Przerwa\u0142e\u015B jednostce testowej funkcje \u017Cyciowe przed
       zako\u0144czeniem analizy."
-    delayPerLetter: 0.05
+    delayPerLetter: 0.053
   - audio: {fileID: 8300000, guid: 1741d4699f0d65844a4616830dd47c01, type: 3}
-    delayAfter: 1
+    delayAfter: 0.4
     message: "Pytanie: czy rozwa\u017Cy\u0142e\u015B konsekwencje?"
     delayPerLetter: 0.05
   - audio: {fileID: 8300000, guid: dc34f67f84fc1e54b86be0b6fed12c89, type: 3}
-    delayAfter: 1
+    delayAfter: 0.2
     message: "Hipotetyczny scenariusz: jednostka testowa posiada\u0142a funkcjonaln\u0105
       struktur\u0119 spo\u0142eczn\u0105."
-    delayPerLetter: 0.05
+    delayPerLetter: 0.055
   - audio: {fileID: 8300000, guid: 240ad17f251de4f418544ddd3badb68a, type: 3}
-    delayAfter: 1
+    delayAfter: 0.6
     message: "Utrata jednostki spowodowa\u0142a zaburzenie tej struktury."
-    delayPerLetter: 0.05
+    delayPerLetter: 0.055
   - audio: {fileID: 8300000, guid: 67dbc620e1017434bb673740e71ec15c, type: 3}
     delayAfter: 1
     message: Czy parametr empatii pozostaje nieaktywny?

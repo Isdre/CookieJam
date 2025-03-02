@@ -1,6 +1,5 @@
 using Bipolar.Prototyping;
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
 namespace Narrator
@@ -48,8 +47,15 @@ namespace Narrator
         public void Stop()
         {
             currentSequence = null;
+            StopAllCoroutines();
             audioSource.Stop();
             OnCommentStop?.Invoke();
+        }
+
+        public static void ClearEvents()
+        {
+            OnSequenceStarted = null;
+            OnSequenceEnded = null;
         }
     }
 }

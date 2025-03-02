@@ -1,0 +1,33 @@
+4.1.1; Symulacja druga, START.
+
+4.1.2; Cel: Ocena zdolności do minimalizowania negatywnego wpływu na otoczenie.
+
+4.1.3; Obiekt testowy przeniesiony do ekosystemu wysokiej wartości biologicznej.
+
+4.1.4; Ziemia uległa degradacji przez działalność ludzką.
+
+4.1.5; Należy sprawdzić, czy obiekt nie wykazuje podobnych skłonności.
+
+4.1.6; Możesz zniszczyć wszystko… lub po prostu zbierać grzyby jak niegdyś ludzie na ziemi.
+
+4.1.7; Obserwacja aktywna.
+
+4.2.1; Analiza zakończona.
+
+4.2.2; Decyzja jednostki testowej: ingerencja destrukcyjna.
+
+4.2.3; Interpretacja: brak umiejętności powstrzymania się od zaburzenia ekosystemu.
+
+4.2.4; Poziom zakończony.
+
+4.2.5; Resetowanie symulacji...
+
+4.3.1; Obserwacja aktywna… brak działań destabilizujących.
+
+4.3.2; Rejestrowanie samokontroli.
+
+4.3.3; Obiekt wykorzystuje biomasę poprawnie.
+
+4.3.4; Analiza pozytywna.
+
+4.3.5; Kontynuacja testu.

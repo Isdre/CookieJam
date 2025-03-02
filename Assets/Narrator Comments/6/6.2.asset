@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f160b88cada4429c39ce8b3fabcbb, type: 3}
+  m_Name: 6.2
+  m_EditorClassIdentifier: 
+  comments:
+  - audio: {fileID: 8300000, guid: 72b2e896f6db27f4a9464d28a0bae85c, type: 3}
+    delayAfter: 0.3
+    message: "Rejestrowanie reakcji: nieuzasadnione generowanie d\u017Awi\u0119ku
+      o wysokiej intensywno\u015Bci."
+    delayPerLetter: 0.055
+  - audio: {fileID: 8300000, guid: 503c544cf69fcd543980c06250d7860b, type: 3}
+    delayAfter: 0.4
+    message: "Analiza: jednostka testowa wykazuje potrzeb\u0119 dominacji nad \u015Brodowiskiem,
+      pomimo ograniczonych mo\u017Cliwo\u015Bci ingerencji."
+    delayPerLetter: 0.06
+  - audio: {fileID: 8300000, guid: af9f99fc61e96b046835093e10127de6, type: 3}
+    delayAfter: 0.6
+    message: "Wska\u017Anik adaptacji: niski."
+    delayPerLetter: 0.05
+  - audio: {fileID: 8300000, guid: 5b41a27037a30224a962f6b31d64e0d8, type: 3}
+    delayAfter: 0.5
+    message: "Jednostki, kt\xF3re nie potrafi\u0105 funkcjonowa\u0107 bez naruszania
+      struktury ekosystemu, nie s\u0105 kompatybilne z nowym \u015Bwiatem."
+    delayPerLetter: 0.055
+  - audio: {fileID: 8300000, guid: b97b4247057d05245aa9835f44083623, type: 3}
+    delayAfter: 1
+    message: "Generowanie kolejnego etapu symulacji\u2026"
+    delayPerLetter: 0.05
