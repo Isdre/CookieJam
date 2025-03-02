@@ -50,6 +50,7 @@ namespace LevelManagement
             if (currentLevelId == -1) {
                 return;
             }
+            PlayerPrefs.SetInt(Levels[currentLevelId].LevelId, 1);
             ChangeLevel(Levels[currentLevelId].NextLevelVariantId);
         }
 
