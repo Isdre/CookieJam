@@ -108,6 +108,6 @@ public class DontKillStoryDirector : MonoBehaviour
 
     private void Lose()
     {
-        LevelsManager.Instance.ResetLevel();
+        LevelsManager.Instance.NextLevelVariant();
     }
 }
