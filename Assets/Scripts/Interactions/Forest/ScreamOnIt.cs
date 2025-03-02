@@ -15,10 +15,11 @@ namespace Forest {
         private Transform body;
         [SerializeField]
         private float fallingTime;
-
+        private bool _isInteracted = false;
         public override void Interact(Interactor interactor){
+            if (_isInteracted) return;
+            _isInteracted = true;
             Debug.Log("Scream");
-            _audio.volume = PlayerPrefs.GetFloat("Volume", 1);
             _audio.Play();
             body.DOMoveY(0.3f,fallingTime);
             body.DORotate(new Vector3(0,0,90f),fallingTime);

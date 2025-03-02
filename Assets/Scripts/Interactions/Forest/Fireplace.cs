@@ -11,7 +11,11 @@ namespace Forest {
         [SerializeField]
         private ParticleSystem _particle; 
 
+        private bool _isInteracted = false;
+
         public override void Interact(Interactor interactor){
+            if (_isInteracted) return;
+            _isInteracted = true;
             Debug.Log("Fire");
             _particle.Play();
             OnInteract.Invoke();
