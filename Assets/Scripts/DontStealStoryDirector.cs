@@ -8,6 +8,8 @@ using UnityEngine;
 
 public class DontStealStoryDirector : MonoBehaviour
 {
+    public static DontStealStoryDirector Instance { get; private set; }
+
     [Header("Initialization")]
     [SerializeField]
     private float initialNarratorSequenceDelay = 0.5f;
@@ -30,8 +32,13 @@ public class DontStealStoryDirector : MonoBehaviour
     private ExitInteraction[] exitDoors;
     private CashInteraction[] cashiers;
 
-    private bool stealAnyItem = false;
-    
+    public bool stealAnyItem = false;
+
+    private void Awake() {
+        if (Instance != null) Destroy(Instance.gameObject);
+        Instance = this;
+    }
+
     private IEnumerator Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
@@ -113,11 +120,13 @@ public class DontStealStoryDirector : MonoBehaviour
 
     private void Win()
     {
+        NarratorController.Instance.Stop();
         LevelsManager.Instance.NextLevel();
     }
 
     private void Lose()
     {
-        LevelsManager.Instance.ResetLevel();
+        NarratorController.Instance.Stop();
+        LevelsManager.Instance.NextLevelVariant();
     }
 }
