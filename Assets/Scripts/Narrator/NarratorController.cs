@@ -47,16 +47,15 @@ namespace Narrator
         public void Stop()
         {
             currentSequence = null;
+            StopAllCoroutines();
             audioSource.Stop();
             OnCommentStop?.Invoke();
         }
 
         public static void ClearEvents()
         {
-            OnCommentSay = null;
             OnSequenceStarted = null;
             OnSequenceEnded = null;
-            OnCommentStop = null;
         }
     }
 }
