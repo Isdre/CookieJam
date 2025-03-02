@@ -493,6 +493,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2035205389541847083, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2594862557694025770}
+    - targetCorrespondingSourceObject: {fileID: 2035205389541847083, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5103613736598464572}
   m_SourcePrefab: {fileID: 100100000, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}
 --- !u!1 &8013651031516007172 stripped
 GameObject:
@@ -748,6 +751,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5103613736598464572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013651031516007172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1514fe736ac93c4b858d0d5803d4783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: "Zap\u0142a\u0107"
 --- !u!4 &8395286803016522948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 048d5aff75e606e4083ef621bd24f6d6, type: 3}

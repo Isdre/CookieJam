@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1514fe736ac93c4b858d0d5803d4783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 
+  message: Rozdepcz
 --- !u!114 &1056037275752468179
 MonoBehaviour:
   m_ObjectHideFlags: 0
