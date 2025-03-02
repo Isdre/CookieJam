@@ -295,6 +295,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6310957d2612397283272513503f7c7, type: 3}
+--- !u!1 &1115728569283459416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8013651031516007172, guid: b6310957d2612397283272513503f7c7, type: 3}
+  m_PrefabInstance: {fileID: 6939457821806260828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8955770284061204567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2018916107953820171, guid: b6310957d2612397283272513503f7c7, type: 3}
@@ -381,6 +386,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6310957d2612397283272513503f7c7, type: 3}
+--- !u!1 &478360247789034387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8013651031516007172, guid: b6310957d2612397283272513503f7c7, type: 3}
+  m_PrefabInstance: {fileID: 7608074263745417367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8471814861770228380 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2018916107953820171, guid: b6310957d2612397283272513503f7c7, type: 3}
@@ -553,7 +563,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2362517133640505042, guid: 2ea1793bf18c61b44a521fbccc4272d7, type: 3}
       insertIndex: 4
       addedObject: {fileID: 6622994620201293324}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5345116919079924895, guid: 2ea1793bf18c61b44a521fbccc4272d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6103618622091410171}
   m_SourcePrefab: {fileID: 100100000, guid: 2ea1793bf18c61b44a521fbccc4272d7, type: 3}
 --- !u!114 &828353562614724277 stripped
 MonoBehaviour:
@@ -566,11 +579,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280c25d425c6eef448b77bb801e6e5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1078174600170877573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8236116946348849656, guid: 2ea1793bf18c61b44a521fbccc4272d7, type: 3}
+  m_PrefabInstance: {fileID: 8987745251690679165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3405054300232221856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6051655338274852829, guid: 2ea1793bf18c61b44a521fbccc4272d7, type: 3}
+  m_PrefabInstance: {fileID: 8987745251690679165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3933693250141585378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5345116919079924895, guid: 2ea1793bf18c61b44a521fbccc4272d7, type: 3}
   m_PrefabInstance: {fileID: 8987745251690679165}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6103618622091410171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3933693250141585378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bddecaa779e7f41af4cef858a5c3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionAfterFrame:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1078174600170877573}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1115728569283459416}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 478360247789034387}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3405054300232221856}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &5267227780836901242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3864670592391203335, guid: 2ea1793bf18c61b44a521fbccc4272d7, type: 3}

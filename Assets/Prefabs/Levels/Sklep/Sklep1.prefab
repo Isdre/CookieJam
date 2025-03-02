@@ -1692,6 +1692,7 @@ GameObject:
   - component: {fileID: 2266439643366068228}
   - component: {fileID: 5383355109027923319}
   - component: {fileID: 1412450063695101209}
+  - component: {fileID: 1160970198357645708}
   m_Layer: 0
   m_Name: Sklep1
   m_TagString: Untagged
@@ -1767,6 +1768,33 @@ MonoBehaviour:
   goodBoyNarratorCommentSequence: {fileID: 11400000, guid: fddb1066c90e97042aae2ff96588d3d3, type: 2}
   disablePlayerOnWin: 0
   stealAnyItem: 0
+--- !u!114 &1160970198357645708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6988381770918047388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bddecaa779e7f41af4cef858a5c3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionAfterFrame:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6914781502874210355}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &7067153028340627183
 GameObject:
   m_ObjectHideFlags: 0
@@ -21710,16 +21738,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2149950051425425143, guid: 48d6a9bbee167314e9b712b82e9967b4, type: 3}
-      propertyPath: outlineColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2149950051425425143, guid: 48d6a9bbee167314e9b712b82e9967b4, type: 3}
       propertyPath: outlineColor.g
       value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2149950051425425143, guid: 48d6a9bbee167314e9b712b82e9967b4, type: 3}
-      propertyPath: outlineColor.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4462149522923653887, guid: 48d6a9bbee167314e9b712b82e9967b4, type: 3}
       propertyPath: onRayExit.m_PersistentCalls.m_Calls.Array.size
@@ -21775,6 +21795,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1904399550315412505, guid: 48d6a9bbee167314e9b712b82e9967b4, type: 3}
   m_PrefabInstance: {fileID: 4764831539631081156}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6914781502874210355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2149950051425425143, guid: 48d6a9bbee167314e9b712b82e9967b4, type: 3}
+  m_PrefabInstance: {fileID: 4764831539631081156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4798381751742607533
 PrefabInstance:
   m_ObjectHideFlags: 0
